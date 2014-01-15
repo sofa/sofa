@@ -1,0 +1,25 @@
+{
+  "name": "sofa",
+  "version": "0.0.0",
+  "description": "The CouchCommerce Web SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sofa/sofa"
+  },
+  "keywords": [
+    "sofa",
+    "sofa.io",
+    "web",
+    "sdk"
+  ],
+  "author": "Pascal Precht <pascal@couchcommerce.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sofa/sofa/issues"
+  },
+  "homepage": "https://github.com/sofa/sofa"
+}
