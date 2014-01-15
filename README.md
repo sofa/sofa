@@ -1,3 +1,3 @@
 # sofa
 
->> The CouchCommerce Web SDK
+> The CouchCommerce Web SDK
