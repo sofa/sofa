@@ -1,10 +1,10 @@
 {
   "name": "sofa",
-  "version": "0.0.0",
-  "description": "The CouchCommerce Web SDK",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Sofa Web SDK",
+  "main": "dist/sofa.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bower install && grunt build"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,45 @@
   "bugs": {
     "url": "https://github.com/sofa/sofa/issues"
   },
-  "homepage": "https://github.com/sofa/sofa"
+  "homepage": "http://www.sofa.io",
+  "devDependencies": {
+    "grunt": "~0.4.3",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-html2js": "~0.1.4",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-jshint": "~0.8.0",
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-karma": "~0.8.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-ngmin": "0.0.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "lodash": "~2.4.1",
+    "grunt-contrib-sass": "~0.7.2",
+    "grunt-cli": "~0.1.13",
+    "karma": "~0.12.0",
+    "grunt-conventional-changelog": "~1.1.0",
+    "sofa-testing": "0.2.x",
+    "karma-jasmine": "~0.1.5",
+    "bower": "~1.2.8",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-firefox-launcher": "~0.1.3"
+  },
+  "dependencies": {
+    "sofa-core": "~0.6.0",
+    "sofa-logging-service": "~0.1.2",
+    "sofa-url-parser-service": "~0.1.1",
+    "sofa-device-service": "~0.1.3",
+    "sofa-storages": "~0.2.1",
+    "sofa-basket-service": "~0.1.3",
+    "sofa-url-construction-service": "~0.2.0",
+    "sofa-search-service": "~0.1.1",
+    "sofa-checkout-service": "~0.1.0",
+    "sofa-tracking": "~0.3.0",
+    "sofa-couch-service": "~0.1.0",
+    "sofa-pages-service": "~0.1.0",
+    "sofa-coupon-service": "~0.1.0",
+    "sofa-http-service": "~0.3.0"
+  }
 }

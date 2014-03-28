@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.10'
+before_install:
+- gem update --system
+- gem install compass --pre
+before_script:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+notifications:
+  hipchat:
+    rooms:
+      secure: A7jX9MT3OZ/k15Ew5odxSw0J/2rViSi6YV5I/6zAjFwNzMy4NGbDH1bsrXHNkI/M0RBTHRtjJN5w5jA5RliUEKd9cW9YIhPBkOw4oOSMSWSjx7ZKap7yYaci7lOa7djAWpXZRGQROEMUeKiwpuq8WXbn6KgCrV6NgfcalVwhVfI=
