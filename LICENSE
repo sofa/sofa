@@ -1,21 +1,3 @@
-Einzufügen in GPL OS Repositories. Falls verwendet, andere MIT Komponenten zusätzlich nennen.
-
-Das Copyright muss in die LICENSE.TXT
-Außerdem diese Referenz in jeden Header:
-
------------------------------------
-
-Copyright (c) 2013 CouchCommerce GmbH (http://www.couchcommerce.org) and other contributors
-THIS SOFTWARE CONTAINS COMPONENTS OF THE COUCHCOMMERCE SDK (COUCHCOMMERCE.ORG).
-IT IS PROVIDED UNDER THE LICENSE TERMS OF THE ATTACHED LICENSE.TXT.
-
-
------------------------------------
-
-Inhalt der License.txt:
-
------------------------------------
-
 GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
 
@@ -226,7 +208,7 @@ Also add information on how to contact you by electronic and paper mail.
 
 If the program does terminal interaction, make it output a short notice like this when it starts in an interactive mode:
 
-    CouchCommerce SDK  Copyright (C) 2013  CouchCommerce GmbH (http://www.couchcommerce.org)
+    sofa.io Copyright (C) 2013  CouchCommerce GmbH (http://www.couchcommerce.org)
 
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
