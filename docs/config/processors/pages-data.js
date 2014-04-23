@@ -35,19 +35,18 @@ function getNavGroup(pages, area, pageSorter, pageMapper) {
 
 var navGroupMappers = {
   api: function(areaPages, area) {
-// console.dir(areaPages);
+
     var navGroups = _(areaPages)
         .filter(function (doc) {
             var dt = doc.docType;
-            return (dt === 'class' || dt === 'module');
+            return (dt === 'class' || dt === 'module' || dt === 'model');
         })
         .groupBy(function (doc) {
             return doc.name
         })
         .map(function (pages, name) {
-
             var navItems = [];
-            var classPage;
+            var componentPage;
 
             _(pages)
 
@@ -55,36 +54,41 @@ var navGroupMappers = {
             .tap(function(docTypes) {
                 log.debug(_.keys(docTypes));
                 // Extract the module page from the collection
-                classPage = docTypes.class[0];
-                delete docTypes.class;
+                if (docTypes.class) {
+                    componentPage = docTypes.class[0];
+                    delete docTypes.class;
+                } else if (docTypes.model) {
+                    componentPage = docTypes.model[0];
+                    delete docTypes.model;
+                }
             })
             .forEach(function(sectionPages, sectionName) {
 
                 sectionPages = _.sortBy(sectionPages, 'name');
 
                 if (sectionPages.length > 0) {
-                // Push a navItem for this section
-                navItems.push({
-                    name: sectionName,
-                    type: 'section',
-                    href: path.dirname(sectionPages[0].path)
-                });
-
-                // Push the rest of the sectionPages for this section
-                _.forEach(sectionPages, function(sectionPage) {
-
+                    // Push a navItem for this section
                     navItems.push({
-                        name: sectionPage.name,
-                        href: sectionPage.path,
-                        type: sectionPage.docType
+                        name: sectionName,
+                        type: 'section',
+                        href: path.dirname(sectionPages[0].path)
                     });
 
-                });
+                    // Push the rest of the sectionPages for this section
+                    _.forEach(sectionPages, function(sectionPage) {
+
+                        navItems.push({
+                            name: sectionPage.name,
+                            href: sectionPage.path,
+                            type: sectionPage.docType
+                        });
+
+                    });
                 }
             });
             return {
                 name: name,
-                href: classPage.path,
+                href: componentPage.path,
                 type: 'group',
                 navItems: navItems
             };
@@ -199,7 +203,7 @@ module.exports = {
     .forEach(function(doc) { if ( !doc.path ) {
       log.warn('Missing path property for ', doc.id);
     }})
-    .map(function(doc) { return _.pick(doc, ['id', 'module', 'docType', 'area']); })
+    .map(function(doc) { return _.pick(doc, ['id', 'module', 'docType', 'area', 'class']); })
     .tap(function(docs) {
       log.debug(docs);
     });

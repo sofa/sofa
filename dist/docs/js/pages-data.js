@@ -16,6 +16,30 @@ angular.module('pagesData', [])
     "outputPath": "partials/api/src/class/sofa.ConfigService.html",
     "path": "api/src/class/sofa.ConfigService"
   },
+  "api/src/class/sofa.LocationService": {
+    "docType": "class",
+    "id": "class:sofa.LocationService",
+    "name": "sofa.LocationService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.LocationService.html",
+    "path": "api/src/class/sofa.LocationService"
+  },
+  "api/src/model/sofa.models.BasketItem": {
+    "docType": "model",
+    "id": "module:src.model:sofa.models.BasketItem",
+    "name": "sofa.models.BasketItem",
+    "area": "api",
+    "outputPath": "partials/api/src/model/sofa.models.BasketItem.html",
+    "path": "api/src/model/sofa.models.BasketItem"
+  },
+  "api/src/model/sofa.models.Product": {
+    "docType": "model",
+    "id": "module:src.model:sofa.models.Product",
+    "name": "sofa.models.Product",
+    "area": "api",
+    "outputPath": "partials/api/src/model/sofa.models.Product.html",
+    "path": "api/src/model/sofa.models.Product"
+  },
   "api/src/class/sofa.Util": {
     "docType": "class",
     "id": "class:sofa.Util",
@@ -47,6 +71,24 @@ angular.module('pagesData', [])
       {
         "name": "sofa.ConfigService",
         "href": "api/src/class/sofa.ConfigService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.LocationService",
+        "href": "api/src/class/sofa.LocationService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.models.BasketItem",
+        "href": "api/src/model/sofa.models.BasketItem",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.models.Product",
+        "href": "api/src/model/sofa.models.Product",
         "type": "group",
         "navItems": []
       },

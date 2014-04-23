@@ -1,0 +1,517 @@
+<a href="http://github.com/sofa/sofa-core/edit/master/src/sofa.models.product.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Model: sofa.models.Product</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L2">sofa-core/src/sofa.models.product.js:2</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        None
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-core">sofa-core</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        None
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>model</em> by installing the <em>sofa-core</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-core</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.core.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+        <p>After that, you can inject this service by using Angular's dependency injection system:</p>
+
+        <pre><code>angular.module(&#39;yourApp&#39;).controller(&#39;FooController&#39;, [&#39;sofa.models.Product&#39;, function (sofa.models.Product) {&#10;&#10;}]);</code></pre>
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>A model that represents a Product object and adds convenient methods to it.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="getImage">
+      <section>
+        <header>
+          <h1>getImage(size)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L14">sofa-core/src/sofa.models.product.js:14</a></p>
+        </header>
+        <p>Returns the url to the product image by a given size. If no image exists in that
+size, it returns a placeholder image url.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        size
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>Image size identifier.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>Image url.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getAllImages">
+      <section>
+        <header>
+          <h1>getAllImages()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L37">sofa-core/src/sofa.models.product.js:37</a></p>
+        </header>
+        <p>Returns all images of the product in size &#39;large&#39;.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-array">array</a></td>
+    <td><p>Array of image urls.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasMultipleImages">
+      <section>
+        <header>
+          <h1>hasMultipleImages()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L56">sofa-core/src/sofa.models.product.js:56</a></p>
+        </header>
+        <p>Returns true if a product supports multiple images.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasBasePrice">
+      <section>
+        <header>
+          <h1>hasBasePrice()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L70">sofa-core/src/sofa.models.product.js:70</a></p>
+        </header>
+        <p>Returns true if a product has a base price.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getBasePrice">
+      <section>
+        <header>
+          <h1>getBasePrice(Optional)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L84">sofa-core/src/sofa.models.product.js:84</a></p>
+        </header>
+        <p>Returns the base price per unit. When variant is passed, return the base price for this variant.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        Optional
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-variant">variant</a>
+      </td>
+      <td>
+        <p>variant object</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-number">Number</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasUnit">
+      <section>
+        <header>
+          <h1>hasUnit()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L104">sofa-core/src/sofa.models.product.js:104</a></p>
+        </header>
+        <p>Returns true if a product has unit defined</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getUnit">
+      <section>
+        <header>
+          <h1>getUnit()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L118">sofa-core/src/sofa.models.product.js:118</a></p>
+        </header>
+        <p>Returns the unit of the product</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">String</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasOldPrice">
+      <section>
+        <header>
+          <h1>hasOldPrice()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L132">sofa-core/src/sofa.models.product.js:132</a></p>
+        </header>
+        <p>Returns true if the product has an old price.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasVariants">
+      <section>
+        <header>
+          <h1>hasVariants()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L146">sofa-core/src/sofa.models.product.js:146</a></p>
+        </header>
+        <p>Returns true if the product supports variants.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasInfiniteStock">
+      <section>
+        <header>
+          <h1>hasInfiniteStock()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L160">sofa-core/src/sofa.models.product.js:160</a></p>
+        </header>
+        <p>Returns true if the product has infinte stock</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="isOutOfStock">
+      <section>
+        <header>
+          <h1>isOutOfStock()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L174">sofa-core/src/sofa.models.product.js:174</a></p>
+        </header>
+        <p>Returns true if the product is currently out of stock.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="areAllVariantsOutOfStock">
+      <section>
+        <header>
+          <h1>areAllVariantsOutOfStock()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L199">sofa-core/src/sofa.models.product.js:199</a></p>
+        </header>
+        <p>Requests if all variants of the product are out of stock.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="hasAttributes">
+      <section>
+        <header>
+          <h1>hasAttributes()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.product.js#L219">sofa-core/src/sofa.models.product.js:219</a></p>
+        </header>
+        <p>Returns true if the product has at least one attribute key</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

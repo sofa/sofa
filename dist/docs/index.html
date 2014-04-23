@@ -81,20 +81,22 @@
     <header>
         <h1>Sofa</h1>
     </header>
-    <ul>
-        <li ng-repeat="navGroup in currentArea.navGroups track by navGroup.name">
-        <a href="#!/{{ navGroup.href }}">{{ navGroup.name }}</a>
+    <nav>
         <ul>
-            <li ng-repeat="navItem in navGroup.navItems">
-                <a href="#!/{{navItem.href}}">{{navItem.name}}</a>
+            <li ng-repeat="navGroup in currentArea.navGroups track by navGroup.name">
+                <a href="#!/{{ navGroup.href }}">{{ navGroup.name }}</a>
+                <ul>
+                    <li ng-repeat="navItem in navGroup.navItems">
+                        <a href="#!/{{navItem.href}}">{{navItem.name}}</a>
+                    </li>
+                </ul>
             </li>
         </ul>
-        </li>
-    </ul>
-    <div class="grid-right">
+    </nav>
+    <main>
         <div id="loading" ng-show="loading">Loading...</div>
         <div ng-hide="loading" ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
-    </div>
+    </main>
 </body>
 </html>
 

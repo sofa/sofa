@@ -1,0 +1,226 @@
+<a href="http://github.com/sofa/sofa-core/edit/master/src/sofa.models.basketItem.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.models.BasketItem</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.basketItem.js#L2">sofa-core/src/sofa.models.basketItem.js:2</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        None
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-core">sofa-core</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        None
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-core</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-core</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.core.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            <pre><code>var basketItem = new sofa.models.BasketItem();</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>A basket item model that represents basket items. This model provides some methods
+to access information about the basket item such as the price or the variant id.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="getPrice">
+      <section>
+        <header>
+          <h1>getPrice()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.basketItem.js#L22">sofa-core/src/sofa.models.basketItem.js:22</a></p>
+        </header>
+        <p>Returns the price of the basket item depending on the variant.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-float">float</a></td>
+    <td><p>Price</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getTotal">
+      <section>
+        <header>
+          <h1>getTotal()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.basketItem.js#L36">sofa-core/src/sofa.models.basketItem.js:36</a></p>
+        </header>
+        <p>Returns the total price of the basket item considering the quantity.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-float">float</a></td>
+    <td><p>Total price</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getVariantID">
+      <section>
+        <header>
+          <h1>getVariantID()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.basketItem.js#L50">sofa-core/src/sofa.models.basketItem.js:50</a></p>
+        </header>
+        <p>Returns the variant id of the basket item if it exists.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-int">int</a></td>
+    <td><p>Variant id.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getOptionID">
+      <section>
+        <header>
+          <h1>getOptionID()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.models.basketItem.js#L64">sofa-core/src/sofa.models.basketItem.js:64</a></p>
+        </header>
+        <p>Returns the option id of the basket item if it exists.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-int">int</a></td>
+    <td><p>Option id.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

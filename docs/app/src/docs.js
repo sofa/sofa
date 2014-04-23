@@ -90,6 +90,8 @@ angular.module('DocsController', [])
       $scope.currentArea = SOFA_NAVIGATION['api'];
       $scope.breadcrumb = [];
     }
+
+    console.dir($scope.currentArea.navGroups);
   });
 
   /**********************************
