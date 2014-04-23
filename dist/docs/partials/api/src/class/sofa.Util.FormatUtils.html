@@ -1,13 +1,13 @@
-<a href="http://github.com/sofa/sofa-core/edit/master/src/sofa.locationService.js">Improve this doc</a>
+<a href="http://github.com/sofa/sofa-checkout-service/edit/master/src/sofa.utils.FormatUtils.js">Improve this doc</a>
 
 
 
 
 <header>
-  <h1>Class: sofa.LocationService</h1>
+  <h1>Class: sofa.Util.FormatUtils</h1>
   <dl>
     <dt>Defined in:</dt>
-    <dd><a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.locationService.js#L2">sofa-core/src/sofa.locationService.js:2</a></dd>
+    <dd><a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.utils.FormatUtils.js#L3">sofa-checkout-service/src/sofa.utils.FormatUtils.js:3</a></dd>
     <dt>Dependencies:</dt>
     <dd>
       
@@ -15,7 +15,7 @@
       
     </dd>
     <dt>Package:<dt>
-    <dd><a href="http://github.com/sofa/sofa-core">sofa-core</a></dt>
+    <dd><a href="http://github.com/sofa/sofa-checkout-service">sofa-checkout-service</a></dt>
     <dt>Package dependencies:<dt>
     <dd>
       
@@ -37,20 +37,20 @@
         <header>
           <h1>Getting the source</h1>
         </header>
-        <p>You can access this <em>class</em> by installing the <em>sofa-core</em> package. Installing this package is as easy as running one of the following commands:</p>
+        <p>You can access this <em>class</em> by installing the <em>sofa-checkout-service</em> package. Installing this package is as easy as running one of the following commands:</p>
 
         <ul>
           <li>
             <h3>Via npm:</h3>
-            <pre><code>npm install sofa-core</code></pre>
+            <pre><code>npm install sofa-checkout-service</code></pre>
           </li>
           <li>
             <h3>Via Bower:</h3>
-            <pre><code>bower install sofa-core</code></pre>
+            <pre><code>bower install sofa-checkout-service</code></pre>
           </li>
           <li>
             <h3>Via Git:</h3>
-            <pre><code>git clone http://github.com/sofa/sofa-core</code></pre>
+            <pre><code>git clone http://github.com/sofa/sofa-checkout-service</code></pre>
           </li>
         </ul>
       </section>
@@ -61,7 +61,7 @@
           <h1>Embedding the source</h1>
         </header>
         <p>After that, embed the distribution file in your HTML document.</p>
-        <pre><code>&lt;script src=&quot;dist/sofa.core.js&quot;&gt;&lt;/script&gt;</code></pre>
+        <pre><code>&lt;script src=&quot;dist/sofa.checkoutService.js&quot;&gt;&lt;/script&gt;</code></pre>
 
         <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
       </section>
@@ -77,11 +77,7 @@
         
           
             
-              <p>After that, create an instance of this service by using the `new` operator:</p>
-
-              
-                <pre><code>var locationService = new sofa.LocationService();</code></pre>
-              
+            <p>This component provides only static methods. You can call them directly on the <code>sofa.Util.FormatUtils</code> object.</p>
             
           
         
@@ -96,7 +92,8 @@
   <header>
     <h1>Description</h1>
   </header>
-  <p>Service to work with the browsers location.</p>
+  <p>The <code>sofa.utils.FormatUtils</code> provides methods to convert various kinds of data into
+other formats used throughout the API and backend.</p>
 
 </section>
 
@@ -110,14 +107,14 @@
     <h1>Methods</h1>
   </header>
   <ul>
-    <li id="path">
+    <li id="zeroFill">
       <section>
         <header>
-          <h1>path()
+          <h1>zeroFill()
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.locationService.js#L14">sofa-core/src/sofa.locationService.js:14</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.utils.FormatUtils.js#L17">sofa-checkout-service/src/sofa.utils.FormatUtils.js:17</a></p>
         </header>
-        <p>Return the location href</p>
+        <p>Turns any number into a string with a specified amount of leading zeros.</p>
 
 
         
@@ -129,7 +126,7 @@
         <table class="variables-matrix return-arguments">
   <tr>
     <td><a href="" class="label type-hint type-hint-string">string</a></td>
-    <td><p>href</p>
+    <td><p>Number with leading zeros</p>
 </td>
   </tr>
 </table>

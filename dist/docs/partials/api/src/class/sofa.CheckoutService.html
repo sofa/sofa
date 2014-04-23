@@ -1,0 +1,467 @@
+<a href="http://github.com/sofa/sofa-checkout-service/edit/master/src/sofa.checkoutService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.CheckoutService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L3">sofa-checkout-service/src/sofa.checkoutService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.HttpService, sofa.QService, sofa.BasketService, sofa.LoggingService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-checkout-service">sofa-checkout-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-q-service">sofa-q-service</a>, <a href="http://github.com/sofa/sofa-basket-service">sofa-basket-service</a>, <a href="http://github.com/sofa/sofa-logging-service">sofa-logging-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-checkout-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-checkout-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-checkout-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-checkout-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.checkoutService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                
+                <pre><code>var checkoutService = new sofa.CheckoutService(httpService, qService, basketService, loggingService);</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>The <code>sofa.CheckoutService</code> provides methods to perform checkouts as well as giving
+you information about used and last used payment or shipping methods. There are
+several checkout types supported, all built behind a clean API.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="getLastUsedPaymentMethod">
+      <section>
+        <header>
+          <h1>getLastUsedPaymentMethod()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L123">sofa-checkout-service/src/sofa.checkoutService.js:123</a></p>
+        </header>
+        <p>Returns the last used payment method.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Last used payment method.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getLastUsedShippingMethod">
+      <section>
+        <header>
+          <h1>getLastUsedShippingMethod()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L140">sofa-checkout-service/src/sofa.checkoutService.js:140</a></p>
+        </header>
+        <p>Returns the last used shipping method.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Last used shipping method.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getShippingMethodsForPayPal">
+      <section>
+        <header>
+          <h1>getShippingMethodsForPayPal(shippingCountry)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L157">sofa-checkout-service/src/sofa.checkoutService.js:157</a></p>
+        </header>
+        <p>This method delegates to <a href="api/src/method/getSupportedCheckoutMethods">sofa.CheckoutService.getSupportedCheckoutMethods</a> end returns the supported shipping
+methods for PayPal. One has to pass a shipping country to determine the
+supported shipping methods.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        shippingCountry
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>Shipping country id.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getSupportedCheckoutMethods">
+      <section>
+        <header>
+          <h1>getSupportedCheckoutMethods(checkoutModel)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L188">sofa-checkout-service/src/sofa.checkoutService.js:188</a></p>
+        </header>
+        <p>Returns supported checkout methods by a given checkout model.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        checkoutModel
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>A full featured checkout model.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="checkoutWithCouchCommerce">
+      <section>
+        <header>
+          <h1>checkoutWithCouchCommerce()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L265">sofa-checkout-service/src/sofa.checkoutService.js:265</a></p>
+        </header>
+        
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="checkoutWithPayPal">
+      <section>
+        <header>
+          <h1>checkoutWithPayPal(shippingMethod, shippingCountry)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L310">sofa-checkout-service/src/sofa.checkoutService.js:310</a></p>
+        </header>
+        
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        shippingMethod
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Shipping method object.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        shippingCountry
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Country to ship.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="getSummary">
+      <section>
+        <header>
+          <h1>getSummary()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L412">sofa-checkout-service/src/sofa.checkoutService.js:412</a></p>
+        </header>
+        
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getLastSummary">
+      <section>
+        <header>
+          <h1>getLastSummary()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L451">sofa-checkout-service/src/sofa.checkoutService.js:451</a></p>
+        </header>
+        
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Last summary response.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="activateOrder">
+      <section>
+        <header>
+          <h1>activateOrder()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-checkout-service/blob/master/src/sofa.checkoutService.js#L462">sofa-checkout-service/src/sofa.checkoutService.js:462</a></p>
+        </header>
+        
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

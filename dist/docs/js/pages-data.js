@@ -135,6 +135,22 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.SearchService.html",
     "path": "api/src/class/sofa.SearchService"
+  },
+  "api/src/class/sofa.CheckoutService": {
+    "docType": "class",
+    "id": "class:sofa.CheckoutService",
+    "name": "sofa.CheckoutService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.CheckoutService.html",
+    "path": "api/src/class/sofa.CheckoutService"
+  },
+  "api/src/class/sofa.Util.FormatUtils": {
+    "docType": "class",
+    "id": "class:sofa.Util.FormatUtils",
+    "name": "sofa.Util.FormatUtils",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.Util.FormatUtils.html",
+    "path": "api/src/class/sofa.Util.FormatUtils"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -235,6 +251,18 @@ angular.module('pagesData', [])
       {
         "name": "sofa.SearchService",
         "href": "api/src/class/sofa.SearchService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.CheckoutService",
+        "href": "api/src/class/sofa.CheckoutService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.Util.FormatUtils",
+        "href": "api/src/class/sofa.Util.FormatUtils",
         "type": "group",
         "navItems": []
       }

@@ -65,7 +65,7 @@
     "sofa-basket-service": "git+ssh://git@github.com:sofa/sofa-basket-service.git#docs",
     "sofa-url-construction-service": "git+ssh://git@github.com:sofa/sofa-url-construction-service.git#docs",
     "sofa-search-service": "git+ssh://git@github.com:sofa/sofa-search-service.git#docs",
-    "sofa-checkout-service": "~0.1.0",
+    "sofa-checkout-service": "git+ssh://git@github.com:sofa/sofa-checkout-service.git#docs",
     "sofa-tracking": "~0.3.0",
     "sofa-couch-service": "~0.1.0",
     "sofa-pages-service": "~0.1.0",
