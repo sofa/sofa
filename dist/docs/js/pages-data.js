@@ -207,6 +207,14 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.PagesService.html",
     "path": "api/src/class/sofa.PagesService"
+  },
+  "api/src/class/sofa.CouponService": {
+    "docType": "class",
+    "id": "class:sofa.CouponService",
+    "name": "sofa.CouponService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.CouponService.html",
+    "path": "api/src/class/sofa.CouponService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -361,6 +369,12 @@ angular.module('pagesData', [])
       {
         "name": "sofa.PagesService",
         "href": "api/src/class/sofa.PagesService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.CouponService",
+        "href": "api/src/class/sofa.CouponService",
         "type": "group",
         "navItems": []
       }

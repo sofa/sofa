@@ -69,7 +69,7 @@
     "sofa-tracking": "git+ssh://git@github.com:sofa/sofa-tracking.git#docs",
     "sofa-couch-service": "git+ssh://git@github.com:sofa/sofa-couch-service.git#docs",
     "sofa-pages-service": "git+ssh://git@github.com:sofa/sofa-pages-service.git#docs",
-    "sofa-coupon-service": "~0.1.0",
+    "sofa-coupon-service": "git+ssh://git@github.com:sofa/sofa-coupon-service.git#docs",
     "sofa-http-service": "~0.3.0",
     "sofa-q-service": "~0.1.0"
   }

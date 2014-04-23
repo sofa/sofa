@@ -1,0 +1,172 @@
+<a href="http://github.com/sofa/sofa-coupon-service/edit/master/src/sofa.couponService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.CouponService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-coupon-service/blob/master/src/sofa.couponService.js#L3">sofa-coupon-service/src/sofa.couponService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.HttpService, sofa.QService, sofa.BasketService, sofa.CheckoutService, sofa.LoggingService, sofa.ConfigService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-coupon-service">sofa-coupon-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>, <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-q-service">sofa-q-service</a>, <a href="http://github.com/sofa/sofa-basket-service">sofa-basket-service</a>, <a href="http://github.com/sofa/sofa-checkout-service">sofa-checkout-service</a>, <a href="http://github.com/sofa/sofa-logging-service">sofa-logging-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-coupon-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-coupon-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-coupon-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-coupon-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.couponService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                
+                <pre><code>var couponService = new sofa.CouponService(httpService, qService, basketService, checkoutService, loggingService, configService);</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>A service that allows you to validate coupon codes against the backend.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="submitCode">
+      <section>
+        <header>
+          <h1>submitCode(couponCode)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-coupon-service/blob/master/src/sofa.couponService.js#L35">sofa-coupon-service/src/sofa.couponService.js:35</a></p>
+        </header>
+        <p>Validates a coupon code against the backend.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        couponCode
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The code of the coupon to validate</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+
