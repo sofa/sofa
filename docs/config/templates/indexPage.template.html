@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" ng-app="docsApp" ng-controller="DocsController">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="Description" content="">
+  <meta name="fragment" content="!">
+  <title ng-bind-template="Sofa.io: {{ currentArea.name }}: {{ currentPage.name || 'Error: Page not found'}}">Sofa.io</title>
+
+  <script type="text/javascript">
+    // dynamically add base tag as well as css and javascript files.
+    // we can't add css/js the usual way, because some browsers (FF) eagerly prefetch resources
+    // before the base attribute is added, causing 404 and terribly slow loading of the docs app.
+    (function() {
+      var indexFile = (location.pathname.match(/\/(index[^\.]*\.html)/) || ['', ''])[1],
+          rUrl = /(#!\/|api|guide|misc|tutorial|error|index[^\.]*\.html).*$/,
+          baseUrl = location.href.replace(rUrl, indexFile),
+          headEl = document.getElementsByTagName('head')[0],
+          sync = true;
+
+      addTag('base', {href: baseUrl});
+
+
+      {% for stylesheet in doc.stylesheets %}addTag('link', {rel: 'stylesheet', href: '{$ stylesheet $}', type: 'text/css'});
+      {% endfor %}
+
+      {% for script in doc.scripts %}addTag('script', {src: '{$ script $}' }, sync);
+      {% endfor %}
+
+      function addTag(name, attributes, sync) {
+        var el = document.createElement(name),
+            attrName;
+
+        for (attrName in attributes) {
+          el.setAttribute(attrName, attributes[attrName]);
+        }
+
+        sync ? document.write(outerHTML(el)) : headEl.appendChild(el);
+      }
+
+      function outerHTML(node){
+        // if IE, Chrome take the internal method otherwise build one
+        return node.outerHTML || (
+            function(n){
+                var div = document.createElement('div'), h;
+                div.appendChild(n);
+                h = div.innerHTML;
+                div = null;
+                return h;
+            })(node);
+      }
+    })();
+
+
+    // force page reload when new update is available
+    window.applicationCache && window.applicationCache.addEventListener('updateready', function(e) {
+      if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+        window.applicationCache.swapCache();
+        window.location.reload();
+      }
+    }, false);
+
+    // GA asynchronous tracker
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8594346-3']);
+    _gaq.push(['_setDomainName', '.sofa.io']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+    <header>
+        <h1>Sofa</h1>
+    </header>
+    <ul>
+        <li ng-repeat="navGroup in currentArea.navGroups track by navGroup.name">
+        <a href="#!/{{ navGroup.href }}">{{ navGroup.name }}</a>
+        <ul>
+            <li ng-repeat="navItem in navGroup.navItems">
+                <a href="#!/{{navItem.href}}">{{navItem.name}}</a>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    <div class="grid-right">
+        <div id="loading" ng-show="loading">Loading...</div>
+        <div ng-hide="loading" ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
+    </div>
+</body>
+</html>
+

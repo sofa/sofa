@@ -26,7 +26,10 @@
   },
   "devDependencies": {
     "sofa-testing": "0.2.x",
-    "jasmine.async": "~0.1.0"
+    "jasmine.async": "~0.1.0",
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.16",
+    "angular-cookies": "~1.2.16"
   },
   "resolutions": {
     "sofa-core": "0.6.x",

@@ -1,0 +1,287 @@
+<a href="http://github.com/sofa/sofa-core/edit/master/src/sofa.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.js#L2">sofa-core/src/sofa.js:2</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        None
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-core">sofa-core</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        None
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-core</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-core</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.core.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>There's only one sofa object per app, so you don't need to instantiate or inject anything.</p>
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>The <code>sofa</code> object provides a global namespace for methods to build the internal
+library structure of sofa itself. These are methods for things such as defining
+sub namespaces on the <code>sofa</code> object or providing inheritance functionality for
+JavaScript objects. It&#39;s worth to mention that the <code>sofa</code> object is a very
+low-level interface for developers. You actually don&#39;t have to access all of
+its methods since they are mainly for internal functionality.</p>
+<p>However, when developing new sofa components, that sit on top of sofa&#39;s core,
+you have to use <code>sofa.define()</code> to create a sub namespace and its component
+functionality.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="namespace">
+      <section>
+        <header>
+          <h1>namespace(namespaceString)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.js#L23">sofa-core/src/sofa.js:23</a></p>
+        </header>
+        <p>Creates the given namespace within the <code>sofa</code> namespace. The method returns
+a <code>namespaceObject</code> that contains information about the namespace. Simply pass
+a string that represents a namespace using the dot notation. So a valid namespace
+would be <code>foo.bar.bazinga</code> as well as <code>foo</code>.</p>
+<p>It&#39;s not required to mention <code>sofa</code> as root in the namespace, since this
+method creates the given namespace automatically under <code>sofa</code> namespace. In case
+&#39;sofa&#39; is given as root namespace, it gets stripped out, so its more a kind of
+syntactic sugar to mention <code>sofa</code> namespace.</p>
+<p>The following code creates a namespace for <code>sofa.services.FooService</code>:</p>
+<pre><code class="lang-js">sofa.namespace(&#39;sofa.services.FooService&#39;);</code></pre>
+<p>And like mentioned, this would also create exactly the same namespace:</p>
+<pre><code class="lang-js">sofa.namespace(&#39;services.FooService&#39;);</code></pre>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        namespaceString
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>A string that represents the new created namespace
+e.g. <code>sofa.services.FooService</code>.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>A namespace object containing information about the current
+and parent targets with the following structure:</p>
+<pre><code>targetParent - Parent namespace object.
+targetName - Current namespace name.
+bind - A convenient function to bind a value to the namespace.</code></pre>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="define">
+      <section>
+        <header>
+          <h1>define(namespace, fn)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.js#L95">sofa-core/src/sofa.js:95</a></p>
+        </header>
+        <p>The <code>define</code> method delegates to sofa.namespace and binds a new value to its
+given namespace. Because of delegation, rules for the given namespace are the
+same as for <code>sofa.namespace</code>. As second argument you have to provide a
+constructor function that will be bound to the given namespace.</p>
+<p>You generally use this method to define new components in the <code>sofa</code> namespace.
+For example, creating a new component <code>FooService</code> in the namespace <code>sofa.services</code>
+could look like this:</p>
+<pre><code class="lang-js">sofa.define(&#39;foo.bar&#39;, function () {
+ // some logic
+});</code></pre>
+<p>Since this is plain old JavaScript, it&#39;s also possible to use named functions
+as constructor argument, to make the code a bit more readable:</p>
+<pre><code class="lang-js">var Greeter = function () {
+ return {
+   sayHello: function () {
+     console.log(&#39;hello&#39;);
+   }
+ };
+};
+
+sofa.define(&#39;greeter&#39;, Greeter);</code></pre>
+<p>Once a component is defined, you can use it by instantiating it via <code>new</code>
+operator like this:</p>
+<pre><code class="lang-js">var greeterService = new sofa.greeter();
+greeter.sayHello();</code></pre>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        namespace
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>A string that represents the namespace of the to be
+defined component, e.g. <code>sofa.services.FooService</code>.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        fn
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-function">function</a>
+      </td>
+      <td>
+        <p>A constructor function that will be bound to the namespace.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

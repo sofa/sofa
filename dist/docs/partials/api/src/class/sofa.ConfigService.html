@@ -1,0 +1,299 @@
+<a href="http://github.com/sofa/sofa-core/edit/master/src/sofa.configService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.ConfigService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L2">sofa-core/src/sofa.configService.js:2</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.HttpService, sofa.FooService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-core">sofa-core</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-foo-service">sofa-foo-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-core</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-core</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-core</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.core.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            
+            <pre><code>var configService = new sofa.ConfigService(httpService, fooService);</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>This is a general configuration service which kind of behaves like a registry
+pattern to make configurations available on all layers. Use this service to
+access configuration data for you shop.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="getSupportedCountries">
+      <section>
+        <header>
+          <h1>getSupportedCountries()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L23">sofa-core/src/sofa.configService.js:23</a></p>
+        </header>
+        <p>Returns an array of supported countries for shipping and invoicing. If no
+countries are specified on the internal config object, this method returns
+and empty array. Simply call this method by running:</p>
+<pre><code class="lang-js">var countries = configService.getSupportedCountries();</code></pre>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-array">array</a></td>
+    <td><p>An array of strings for supported countries for shipping and invoicing.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getDefaultCountry">
+      <section>
+        <header>
+          <h1>getDefaultCountry()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L47">sofa-core/src/sofa.configService.js:47</a></p>
+        </header>
+        <p>Returns the default country for shipping and invoicing that is configured
+for the shop. In case no countries are available, this method returns <code>null</code>.</p>
+<pre><code class="lang-js">var defaultCountry = configService.getDefaultCountry();</code></pre>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>Name of the default country.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getLocalizedPayPalButtonClass">
+      <section>
+        <header>
+          <h1>getLocalizedPayPalButtonClass()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L66">sofa-core/src/sofa.configService.js:66</a></p>
+        </header>
+        <p>Returns a localized paypal button css class. This method has to be refactored
+since it currently relies on hard-coded class names. Passing an expression
+that ends up in a boolean value, tells the method wether to return a class
+for an enabled or a disabled button.</p>
+<p>For example calling this method like this:</p>
+<pre><code class="lang-js">var className = configService.getLocalizedPayPalButtonClass();</code></pre>
+<p>Returns the class for an enabled button. Calling it with for example <code>true</code>
+gives us the class for a disabled button.</p>
+<pre><code class="lang-js">var className = configService.getLocalizedPayPalButtonClass(true);</code></pre>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>PayPal button class name.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="get">
+      <section>
+        <header>
+          <h1>get(key, defaultValue)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L96">sofa-core/src/sofa.configService.js:96</a></p>
+        </header>
+        <p>Generic getter function that returns a config value by a given key.</p>
+<pre><code class="lang-js">var value = configService.get(&#39;foo&#39;);</code></pre>
+<p>If a default value is passed and no config setting with the given key
+exists, it is returned. For example, assuming that no configuration for
+<code>foo</code> exists, we can default to any custom value like this:</p>
+<pre><code class="lang-js">var value = configService.get(&#39;foo&#39;, 5); // `5` is a default value</code></pre>
+<p>If no configuration exists and no default value is given, this method
+returns <code>undefined</code>.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        key
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>Key for a certain config value.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        defaultValue
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>A default value which will be returned
+if given key doesn&#39;t exist in config.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Associative object for <code>key</code>.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+
