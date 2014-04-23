@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "sofa-core": "git+ssh://git@github.com:sofa/sofa-core.git#docs",
-    "sofa-logging-service": "~0.1.2",
+    "sofa-logging-service": "git+ssh://git@github.com:sofa/sofa-logging-service.git#docs",
     "sofa-url-parser-service": "~0.1.1",
     "sofa-device-service": "~0.1.3",
     "sofa-storages": "~0.2.1",

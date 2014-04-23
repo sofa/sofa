@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="Description" content="">
   <meta name="fragment" content="!">
-  <title ng-bind-template="Sofa.io: {{ currentArea.name }}: {{ currentPage.name || 'Error: Page not found'}}">Sofa.io</title>
+  <title ng-bind-template="Sofa.io {{ currentArea.name }}: {{ currentPage.name || 'Error: Page not found'}}">Sofa.io</title>
 
   <script type="text/javascript">
     // dynamically add base tag as well as css and javascript files.
@@ -90,8 +90,7 @@
         </ul>
     </nav>
     <main>
-        <div id="loading" ng-show="loading">Loading...</div>
-        <div ng-hide="loading" ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
+        <div ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
     </main>
 </body>
 </html>

@@ -55,6 +55,30 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/method/isToFixedBroken.html",
     "path": "api/src/method/isToFixedBroken"
+  },
+  "api/src/class/sofa.Util.Array": {
+    "docType": "class",
+    "id": "class:sofa.Util.Array",
+    "name": "sofa.Util.Array",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.Util.Array.html",
+    "path": "api/src/class/sofa.Util.Array"
+  },
+  "api/src/class/sofa.Util.TreeIterator": {
+    "docType": "class",
+    "id": "class:sofa.Util.TreeIterator",
+    "name": "sofa.Util.TreeIterator",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.Util.TreeIterator.html",
+    "path": "api/src/class/sofa.Util.TreeIterator"
+  },
+  "api/src/class/sofa.LoggingService": {
+    "docType": "class",
+    "id": "class:sofa.LoggingService",
+    "name": "sofa.LoggingService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.LoggingService.html",
+    "path": "api/src/class/sofa.LoggingService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -95,6 +119,24 @@ angular.module('pagesData', [])
       {
         "name": "sofa.Util",
         "href": "api/src/class/sofa.Util",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.Util.Array",
+        "href": "api/src/class/sofa.Util.Array",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.Util.TreeIterator",
+        "href": "api/src/class/sofa.Util.TreeIterator",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.LoggingService",
+        "href": "api/src/class/sofa.LoggingService",
         "type": "group",
         "navItems": []
       }

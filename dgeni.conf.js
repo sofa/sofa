@@ -27,10 +27,10 @@ module.exports = function (config) {
             pattern: 'sofa-core/src/sofa.*.js',
             basePath: path.resolve(__dirname, './node_modules')
         },
-        // {
-        //     pattern: 'sofa-core/src/sofa.util.js',
-        //     basePath: path.resolve(__dirname, './node_modules')
-        // }
+        {
+            pattern: 'sofa-logging-service/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
+        }
     ]);
 
     config.set('rendering.outputFolder', 'dist/docs');
