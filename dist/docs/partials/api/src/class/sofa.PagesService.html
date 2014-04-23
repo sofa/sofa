@@ -1,0 +1,240 @@
+<a href="http://github.com/sofa/sofa-pages-service/edit/master/src/sofa.pagesService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.PagesService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-pages-service/blob/master/src/sofa.pagesService.js#L3">sofa-pages-service/src/sofa.pagesService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.HttpService, sofa.QService, sofa.ConfigService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-pages-service">sofa-pages-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>, <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-q-service">sofa-q-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-pages-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-pages-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-pages-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-pages-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.pagesService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                
+                <pre><code>var pagesService = new sofa.PagesService(httpService, qService, configService);</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>This service takes care of accessing static page data.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="getPage">
+      <section>
+        <header>
+          <h1>getPage(id)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-pages-service/blob/master/src/sofa.pagesService.js#L28">sofa-pages-service/src/sofa.pagesService.js:28</a></p>
+        </header>
+        <p>Returns a page object by a given id.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        id
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>Page id.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Page object.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getPageConfig">
+      <section>
+        <header>
+          <h1>getPageConfig(id)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-pages-service/blob/master/src/sofa.pagesService.js#L56">sofa-pages-service/src/sofa.pagesService.js:56</a></p>
+        </header>
+        <p>Returns a page configuration object by a given page id.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        id
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>Page id.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Page configuration</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

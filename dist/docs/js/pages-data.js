@@ -199,6 +199,14 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.helper.CategoryMap.html",
     "path": "api/src/class/sofa.helper.CategoryMap"
+  },
+  "api/src/class/sofa.PagesService": {
+    "docType": "class",
+    "id": "class:sofa.PagesService",
+    "name": "sofa.PagesService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.PagesService.html",
+    "path": "api/src/class/sofa.PagesService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -347,6 +355,12 @@ angular.module('pagesData', [])
       {
         "name": "sofa.helper.CategoryMap",
         "href": "api/src/class/sofa.helper.CategoryMap",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.PagesService",
+        "href": "api/src/class/sofa.PagesService",
         "type": "group",
         "navItems": []
       }
