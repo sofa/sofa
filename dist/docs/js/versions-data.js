@@ -6,11 +6,11 @@ angular.module('versionsData', [])
   "minor": 2,
   "patch": 1,
   "prerelease": [],
-  "build": "sha.4c9dd1f",
+  "build": "sha.b0037f7",
   "version": "0.2.1",
   "codeName": "snapshot",
   "isSnapshot": true,
-  "full": "0.2.1+sha.4c9dd1f"
+  "full": "0.2.1+sha.b0037f7"
 })
   .value('SOFA_VERSIONS', [
   {
@@ -19,10 +19,10 @@ angular.module('versionsData', [])
     "minor": 2,
     "patch": 1,
     "prerelease": [],
-    "build": "sha.4c9dd1f",
+    "build": "sha.b0037f7",
     "version": "0.2.1",
     "codeName": "snapshot",
     "isSnapshot": true,
-    "full": "0.2.1+sha.4c9dd1f"
+    "full": "0.2.1+sha.b0037f7"
   }
 ]);

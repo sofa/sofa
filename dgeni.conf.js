@@ -50,6 +50,10 @@ module.exports = function (config) {
         {
             pattern: 'sofa-url-construction-service/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-search-service/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
         }
     ]);
 

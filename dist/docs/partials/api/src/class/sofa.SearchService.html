@@ -1,0 +1,198 @@
+<a href="http://github.com/sofa/sofa-search-service/edit/master/src/sofa.searchService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.SearchService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-search-service/blob/master/src/sofa.searchService.js#L2">sofa-search-service/src/sofa.searchService.js:2</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.ConfigService, sofa.HttpService, sofa.QService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-search-service">sofa-search-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-q-service">sofa-q-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-search-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-search-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-search-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-search-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.searchService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            
+            <pre><code>var searchService = new sofa.SearchService(configService, httpService, qService);</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>Search service which let&#39;s you query against the CouchCommerce API to search
+for products.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="search">
+      <section>
+        <header>
+          <h1>search(searchStr, grouping)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-search-service/blob/master/src/sofa.searchService.js#L25">sofa-search-service/src/sofa.searchService.js:25</a></p>
+        </header>
+        <p>Searches for <code>searchStr</code> and groups the results if <code>grouping</code> is truthy.
+This search is promise based to let you have flow control. Therefore it
+returns a promise that gets resolved with the search results.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        searchStr
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>A search string.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        grouping
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-boolean">boolean</a>
+      </td>
+      <td>
+        <p>Whether to group the results or not.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-promise">Promise</a></td>
+    <td><p>A promise with the search results.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+
