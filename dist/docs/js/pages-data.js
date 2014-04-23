@@ -79,6 +79,14 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.LoggingService.html",
     "path": "api/src/class/sofa.LoggingService"
+  },
+  "api/src/class/sofa.UrlParserService": {
+    "docType": "class",
+    "id": "class:sofa.UrlParserService",
+    "name": "sofa.UrlParserService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.UrlParserService.html",
+    "path": "api/src/class/sofa.UrlParserService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -137,6 +145,12 @@ angular.module('pagesData', [])
       {
         "name": "sofa.LoggingService",
         "href": "api/src/class/sofa.LoggingService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.UrlParserService",
+        "href": "api/src/class/sofa.UrlParserService",
         "type": "group",
         "navItems": []
       }

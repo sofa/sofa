@@ -11,7 +11,8 @@
     <dt>Dependencies:</dt>
     <dd>
       
-        None
+        
+        sofa.ConfigService
       
     </dd>
     <dt>Package:<dt>
@@ -19,7 +20,8 @@
     <dt>Package dependencies:<dt>
     <dd>
       
-        None
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>
       
     </dd>
   </dl>
@@ -78,7 +80,8 @@
           <p>After that, create an instance of this service by using the `new` operator:</p>
 
             
-            <pre><code>var loggingService = new sofa.LoggingService();</code></pre>
+            
+            <pre><code>var loggingService = new sofa.LoggingService(configService);</code></pre>
             
           
 
@@ -115,7 +118,7 @@ methods for logging like <code>.log()</code>, <code>.info()</code> etc..</p>
         <header>
           <h1>info(str)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L40">sofa-logging-service/src/sofa.loggingService.js:40</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L42">sofa-logging-service/src/sofa.loggingService.js:42</a></p>
         </header>
         <p>A <code>console.info()</code> wrapper to log some info in the console.</p>
 
@@ -165,7 +168,7 @@ methods for logging like <code>.log()</code>, <code>.info()</code> etc..</p>
         <header>
           <h1>log(str)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L60">sofa-logging-service/src/sofa.loggingService.js:60</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L62">sofa-logging-service/src/sofa.loggingService.js:62</a></p>
         </header>
         <p>A <code>console.log()</code> wrapper to log to console.</p>
 
@@ -215,7 +218,7 @@ methods for logging like <code>.log()</code>, <code>.info()</code> etc..</p>
         <header>
           <h1>warn(str)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L80">sofa-logging-service/src/sofa.loggingService.js:80</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L82">sofa-logging-service/src/sofa.loggingService.js:82</a></p>
         </header>
         <p>A <code>console.warn()</code> wrapper to log warnings to console.</p>
 
@@ -265,7 +268,7 @@ methods for logging like <code>.log()</code>, <code>.info()</code> etc..</p>
         <header>
           <h1>error(str)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L100">sofa-logging-service/src/sofa.loggingService.js:100</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-logging-service/blob/master/src/sofa.loggingService.js#L102">sofa-logging-service/src/sofa.loggingService.js:102</a></p>
         </header>
         <p>A <code>console.error()</code> wrapper to log errors to console.</p>
 

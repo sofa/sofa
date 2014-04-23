@@ -11,8 +11,7 @@
     <dt>Dependencies:</dt>
     <dd>
       
-        
-        sofa.HttpService, sofa.FooService
+        None
       
     </dd>
     <dt>Package:<dt>
@@ -20,8 +19,7 @@
     <dt>Package dependencies:<dt>
     <dd>
       
-        
-        <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-foo-service">sofa-foo-service</a>
+        None
       
     </dd>
   </dl>
@@ -80,8 +78,7 @@
           <p>After that, create an instance of this service by using the `new` operator:</p>
 
             
-            
-            <pre><code>var configService = new sofa.ConfigService(httpService, fooService);</code></pre>
+            <pre><code>var configService = new sofa.ConfigService();</code></pre>
             
           
 
@@ -118,7 +115,7 @@ access configuration data for you shop.</p>
         <header>
           <h1>getSupportedCountries()
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L23">sofa-core/src/sofa.configService.js:23</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L19">sofa-core/src/sofa.configService.js:19</a></p>
         </header>
         <p>Returns an array of supported countries for shipping and invoicing. If no
 countries are specified on the internal config object, this method returns
@@ -148,7 +145,7 @@ and empty array. Simply call this method by running:</p>
         <header>
           <h1>getDefaultCountry()
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L47">sofa-core/src/sofa.configService.js:47</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L43">sofa-core/src/sofa.configService.js:43</a></p>
         </header>
         <p>Returns the default country for shipping and invoicing that is configured
 for the shop. In case no countries are available, this method returns <code>null</code>.</p>
@@ -177,7 +174,7 @@ for the shop. In case no countries are available, this method returns <code>null
         <header>
           <h1>getLocalizedPayPalButtonClass()
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L66">sofa-core/src/sofa.configService.js:66</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L62">sofa-core/src/sofa.configService.js:62</a></p>
         </header>
         <p>Returns a localized paypal button css class. This method has to be refactored
 since it currently relies on hard-coded class names. Passing an expression
@@ -212,7 +209,7 @@ gives us the class for a disabled button.</p>
         <header>
           <h1>get(key, defaultValue)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L96">sofa-core/src/sofa.configService.js:96</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.configService.js#L92">sofa-core/src/sofa.configService.js:92</a></p>
         </header>
         <p>Generic getter function that returns a config value by a given key.</p>
 <pre><code class="lang-js">var value = configService.get(&#39;foo&#39;);</code></pre>

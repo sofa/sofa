@@ -1,0 +1,259 @@
+<a href="http://github.com/sofa/sofa-url-parser-service/edit/master/src/sofa.urlParserService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.UrlParserService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-url-parser-service/blob/master/src/sofa.urlParserService.js#L3">sofa-url-parser-service/src/sofa.urlParserService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.LocationService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-url-parser-service">sofa-url-parser-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-url-parser-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-url-parser-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-url-parser-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-url-parser-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.urlParserService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            
+            <pre><code>var urlParserService = new sofa.UrlParserService(locationService);</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>This service provides a clean interface when it comes to accessing url ids
+for categories and products.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="isView">
+      <section>
+        <header>
+          <h1>isView(viewName)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-url-parser-service/blob/master/src/sofa.urlParserService.js#L30">sofa-url-parser-service/src/sofa.urlParserService.js:30</a></p>
+        </header>
+        <p>Returns true if given <code>viewName</code> is a view.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        viewName
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>View name.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="isRootCategory">
+      <section>
+        <header>
+          <h1>isRootCategory()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-url-parser-service/blob/master/src/sofa.urlParserService.js#L51">sofa-url-parser-service/src/sofa.urlParserService.js:51</a></p>
+        </header>
+        <p>Returns true if current location path is a root category.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getCategoryUrlId">
+      <section>
+        <header>
+          <h1>getCategoryUrlId()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-url-parser-service/blob/master/src/sofa.urlParserService.js#L66">sofa-url-parser-service/src/sofa.urlParserService.js:66</a></p>
+        </header>
+        <p>Extracts a category url id from a URL for you and returns it.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>Category url id.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getProductUrlId">
+      <section>
+        <header>
+          <h1>getProductUrlId()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-url-parser-service/blob/master/src/sofa.urlParserService.js#L82">sofa-url-parser-service/src/sofa.urlParserService.js:82</a></p>
+        </header>
+        <p>Extracts a Product url id from a URL for you and returns it.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-string">string</a></td>
+    <td><p>Product url id.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

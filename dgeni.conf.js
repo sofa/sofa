@@ -30,6 +30,10 @@ module.exports = function (config) {
         {
             pattern: 'sofa-logging-service/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-url-parser-service/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
         }
     ]);
 
