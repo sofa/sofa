@@ -175,6 +175,30 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.tracking.TrackingService.html",
     "path": "api/src/class/sofa.tracking.TrackingService"
+  },
+  "api/src/class/sofa.comparer.ProductComparer": {
+    "docType": "class",
+    "id": "class:sofa.comparer.ProductComparer",
+    "name": "sofa.comparer.ProductComparer",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.comparer.ProductComparer.html",
+    "path": "api/src/class/sofa.comparer.ProductComparer"
+  },
+  "api/src/class/sofa.CouchService": {
+    "docType": "class",
+    "id": "class:sofa.CouchService",
+    "name": "sofa.CouchService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.CouchService.html",
+    "path": "api/src/class/sofa.CouchService"
+  },
+  "api/src/class/sofa.helper.CategoryMap": {
+    "docType": "class",
+    "id": "class:sofa.helper.CategoryMap",
+    "name": "sofa.helper.CategoryMap",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.helper.CategoryMap.html",
+    "path": "api/src/class/sofa.helper.CategoryMap"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -305,6 +329,24 @@ angular.module('pagesData', [])
       {
         "name": "sofa.tracking.TrackingService",
         "href": "api/src/class/sofa.tracking.TrackingService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.comparer.ProductComparer",
+        "href": "api/src/class/sofa.comparer.ProductComparer",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.CouchService",
+        "href": "api/src/class/sofa.CouchService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.helper.CategoryMap",
+        "href": "api/src/class/sofa.helper.CategoryMap",
         "type": "group",
         "navItems": []
       }

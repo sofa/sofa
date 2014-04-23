@@ -1,0 +1,661 @@
+<a href="http://github.com/sofa/sofa-couch-service/edit/master/src/sofa.couchService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.CouchService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L3">sofa-couch-service/src/sofa.couchService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.HttpService, sofa.QService, sofa.configService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-couch-service">sofa-couch-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>, <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>, <a href="http://github.com/sofa/sofa-q-service">sofa-q-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-couch-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-couch-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-couch-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-couch-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.couchService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                
+                <pre><code>var couchService = new sofa.CouchService(httpService, qService, configService);</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p><code>CouchService</code> let&#39;s you interact with the CouchCommerce API. It provides methods
+to get products, get preview data or handling with categories.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="isAChildAliasOfB">
+      <section>
+        <header>
+          <h1>isAChildAliasOfB(a, b)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L38">sofa-couch-service/src/sofa.couchService.js:38</a></p>
+        </header>
+        <p>Checks whether a given category a exists as an child
+on another category b. Taking only direct childs into account.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        a
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category a.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        b
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category b.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="isAParentOfB">
+      <section>
+        <header>
+          <h1>isAParentOfB(a, b)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L64">sofa-couch-service/src/sofa.couchService.js:64</a></p>
+        </header>
+        <p>Checks whether a given category is the parent of another category taking
+n hops into account.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        a
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category a.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        b
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category b.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="isAChildOfB">
+      <section>
+        <header>
+          <h1>isAChildOfB(a, b)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L84">sofa-couch-service/src/sofa.couchService.js:84</a></p>
+        </header>
+        <p>Checks whether a given category is the child
+of another category taking n hops into account.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        a
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category a.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        b
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Category b.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td></td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getCategory">
+      <section>
+        <header>
+          <h1>getCategory(categoryUrlId)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L102">sofa-couch-service/src/sofa.couchService.js:102</a></p>
+        </header>
+        <p>Fetches the category with the given <code>categoryUrlId</code> If no category is
+specified, the method defaults to the root category.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        categoryUrlId
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The category to be fetched.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-promise">Promise</a></td>
+    <td><p>A promise.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getProducts">
+      <section>
+        <header>
+          <h1>getProducts(categoryUrlId)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L128">sofa-couch-service/src/sofa.couchService.js:128</a></p>
+        </header>
+        <p>Fetches all products of a given category.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        categoryUrlId
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>The urlId of the category to fetch the products from.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-promise">Promise</a></td>
+    <td><p>A promise that gets resolved with products.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getNextProduct">
+      <section>
+        <header>
+          <h1>getNextProduct(product)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L172">sofa-couch-service/src/sofa.couchService.js:172</a></p>
+        </header>
+        <p>Fetches the next product within the product&#39;s category.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        product
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The product to find the neighbour of.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Next product.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getPreviousProduct">
+      <section>
+        <header>
+          <h1>getPreviousProduct(product)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L199">sofa-couch-service/src/sofa.couchService.js:199</a></p>
+        </header>
+        <p>Fetches the previous product within the product&#39;s category.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        product
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The product to find the neighbour of.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Previous product.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getProduct">
+      <section>
+        <header>
+          <h1>getProduct(categoryUrlId, productUrlId)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-couch-service/blob/master/src/sofa.couchService.js#L249">sofa-couch-service/src/sofa.couchService.js:249</a></p>
+        </header>
+        <p>Fetches a single product. Notice that both the <code>categoryUrlId</code>
+and the <code>productUrlId</code> need to be specified in order to get the product.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        categoryUrlId
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>The urlId of the category the product belongs to.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        productUrlId
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>The urlId of the product itself.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>product</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+
