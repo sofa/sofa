@@ -10,6 +10,7 @@
 
 'use strict';
 /**
+ * @name sofa
  * @module sofa
  *
  * @description
@@ -187,7 +188,7 @@ sofa.inherits = function (c, p, proto) {
 
     proto = proto || {};
     var e = {};
-    
+
     [c.prototype, proto].forEach(function (s) {
         Object.getOwnPropertyNames(s).forEach(function (k) {
             e[k] = Object.getOwnPropertyDescriptor(s, k);
@@ -2187,7 +2188,7 @@ sofa.define('sofa.CheckoutService', function ($http, $q, basketService, loggingS
 
 /**
  * sofa-couch-service - v0.1.0 - 2014-03-26
- * 
+ *
  *
  * Copyright (c) 2013 CouchCommerce GmbH (http://www.couchcommerce.org) and other contributors
  * THIS SOFTWARE CONTAINS COMPONENTS OF THE SOFA SDK (SOFA.IO).
@@ -3679,7 +3680,7 @@ sofa.define('sofa.LoggingService', function (configService) {
 
 /**
  * sofa-pages-service - v0.1.0 - 2014-03-24
- * 
+ *
  *
  * Copyright (c) 2013 CouchCommerce GmbH (http://www.couchcommerce.org) and other contributors
  * THIS SOFTWARE CONTAINS COMPONENTS OF THE SOFA SDK (SOFA.IO).
@@ -4998,7 +4999,7 @@ sofa.define('sofa.UrlParserService', function ($location) {
     /**
      * @method getCategoryUrlId
      * @memberof sofa.UrlParserService
-     * 
+     *
      * @description
      * Extracts a category url id from a URL for you and returns it.
      *
