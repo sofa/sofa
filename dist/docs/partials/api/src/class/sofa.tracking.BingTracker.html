@@ -1,0 +1,208 @@
+<a href="http://github.com/sofa/sofa-tracking/edit/master/src/sofa.tracking.bingTracker.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.tracking.BingTracker</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.bingTracker.js#L4">sofa-tracking/src/sofa.tracking.bingTracker.js:4</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        None
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-tracking">sofa-tracking</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>, <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-tracking</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-tracking</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-tracking</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-tracking</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.tracking.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                <pre><code>var bingTracker = new sofa.tracking.BingTracker();</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>A Bing Tracker abstraction layer to connect to the SDK&#39;s
+tracker interface.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="setup">
+      <section>
+        <header>
+          <h1>setup()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.bingTracker.js#L23">sofa-tracking/src/sofa.tracking.bingTracker.js:23</a></p>
+        </header>
+        <p>Sets up Bing tracking code snippet with provided client
+information like account number and domain name.</p>
+
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="trackEvent">
+      <section>
+        <header>
+          <h1>trackEvent()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.bingTracker.js#L36">sofa-tracking/src/sofa.tracking.bingTracker.js:36</a></p>
+        </header>
+        <p>Dummy tracking method for Bing, only transactions can be tracked.</p>
+
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="trackTransaction">
+      <section>
+        <header>
+          <h1>trackTransaction(transactionData)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.bingTracker.js#L48">sofa-tracking/src/sofa.tracking.bingTracker.js:48</a></p>
+        </header>
+        <p>Pushes transaction data using the Bing Ecommerce Tracking API</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        transactionData
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Transaction data object.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

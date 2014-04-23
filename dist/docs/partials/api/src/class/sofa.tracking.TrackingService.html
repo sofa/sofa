@@ -1,0 +1,275 @@
+<a href="http://github.com/sofa/sofa-tracking/edit/master/src/sofa.tracking.trackingService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.tracking.TrackingService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.trackingService.js#L3">sofa-tracking/src/sofa.tracking.trackingService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        window, sofa.HttpService, sofa.ConfigService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-tracking">sofa-tracking</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>, <a href="http://github.com/sofa/sofa-http-service">sofa-http-service</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-tracking</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-tracking</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-tracking</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-tracking</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.tracking.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+
+        
+          
+            
+              <p>After that, create an instance of this service by using the `new` operator:</p>
+
+              
+                
+                <pre><code>var trackingService = new sofa.tracking.TrackingService(window, httpService, configService);</code></pre>
+              
+            
+          
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>Abstraction layer to communicate with concrete tracker services
+like Google Analytics.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="addTracker">
+      <section>
+        <header>
+          <h1>addTracker(tracker)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.trackingService.js#L31">sofa-tracking/src/sofa.tracking.trackingService.js:31</a></p>
+        </header>
+        <p>Adds a concrete tracker service implementation and also takes care
+of the setup. It&#39;ll throw exceptions if the tracker service
+doesn&#39;t implement the needed API.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        tracker
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Concrete tracker implementation.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="trackEvent">
+      <section>
+        <header>
+          <h1>trackEvent(eventData)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.trackingService.js#L61">sofa-tracking/src/sofa.tracking.trackingService.js:61</a></p>
+        </header>
+        <p>Forces all registered trackers to track an event.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        eventData
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Event data object.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="trackTransaction">
+      <section>
+        <header>
+          <h1>trackTransaction(token.)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-tracking/blob/master/src/sofa.tracking.trackingService.js#L80">sofa-tracking/src/sofa.tracking.trackingService.js:80</a></p>
+        </header>
+        <p>First requests information about a token from the backend, then
+forces all registered trackers to track the associated transaction.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        token.
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

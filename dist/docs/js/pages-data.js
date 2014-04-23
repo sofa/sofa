@@ -151,6 +151,30 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.Util.FormatUtils.html",
     "path": "api/src/class/sofa.Util.FormatUtils"
+  },
+  "api/src/class/sofa.tracking.BingTracker": {
+    "docType": "class",
+    "id": "class:sofa.tracking.BingTracker",
+    "name": "sofa.tracking.BingTracker",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.tracking.BingTracker.html",
+    "path": "api/src/class/sofa.tracking.BingTracker"
+  },
+  "api/src/class/sofa.tracking.GoogleAnalyticsTracker": {
+    "docType": "class",
+    "id": "class:sofa.tracking.GoogleAnalyticsTracker",
+    "name": "sofa.tracking.GoogleAnalyticsTracker",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.tracking.GoogleAnalyticsTracker.html",
+    "path": "api/src/class/sofa.tracking.GoogleAnalyticsTracker"
+  },
+  "api/src/class/sofa.tracking.TrackingService": {
+    "docType": "class",
+    "id": "class:sofa.tracking.TrackingService",
+    "name": "sofa.tracking.TrackingService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.tracking.TrackingService.html",
+    "path": "api/src/class/sofa.tracking.TrackingService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -263,6 +287,24 @@ angular.module('pagesData', [])
       {
         "name": "sofa.Util.FormatUtils",
         "href": "api/src/class/sofa.Util.FormatUtils",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.tracking.BingTracker",
+        "href": "api/src/class/sofa.tracking.BingTracker",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.tracking.GoogleAnalyticsTracker",
+        "href": "api/src/class/sofa.tracking.GoogleAnalyticsTracker",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.tracking.TrackingService",
+        "href": "api/src/class/sofa.tracking.TrackingService",
         "type": "group",
         "navItems": []
       }

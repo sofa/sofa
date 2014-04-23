@@ -58,6 +58,10 @@ module.exports = function (config) {
         {
             pattern: 'sofa-checkout-service/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-tracking/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
         }
     ]);
 
