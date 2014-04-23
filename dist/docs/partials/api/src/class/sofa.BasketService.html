@@ -1,0 +1,1117 @@
+<a href="http://github.com/sofa/sofa-basket-service/edit/master/src/sofa.basketService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.BasketService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L3">sofa-basket-service/src/sofa.basketService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        
+        sofa.MemoryStorageService || sofa.LocalStorageService
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-basket-service">sofa-basket-service</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-storages">sofa-storages</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-basket-service</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-basket-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-basket-service</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-basket-service</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.basketService.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            
+            <pre><code>var basketService = new sofa.BasketService(localStorageService);</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p><code>sofa.BasketService</code> is the interface to interact with a shopping cart. It provides
+methods to add, remove or update basket items. It also takes care of writing
+updates to an available storage service.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="addItem">
+      <section>
+        <header>
+          <h1>addItem(product, quantity, variant, optionId)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L74">sofa-basket-service/src/sofa.basketService.js:74</a></p>
+        </header>
+        <p>Adds an item to the basket. Returns the added basket item.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        product
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The product object itself.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        quantity
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-number">number</a>
+      </td>
+      <td>
+        <p>The number of times the product should be added.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        variant
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The variant the product should be added with.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        optionId
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>The optionId the product should be added with.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>The added basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="canBeIncreasedBy">
+      <section>
+        <header>
+          <h1>canBeIncreasedBy(basketItem, quantity)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L128">sofa-basket-service/src/sofa.basketService.js:128</a></p>
+        </header>
+        <p>Checks for a given basketItem if it can be increased by a specified amount.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        basketItem
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>used for the check.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        quantity
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-number">number</a>
+      </td>
+      <td>
+        <p>to be checked against.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td><p>returns true if the item amount can be increased.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="addCoupon">
+      <section>
+        <header>
+          <h1>addCoupon(couponData)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L161">sofa-basket-service/src/sofa.basketService.js:161</a></p>
+        </header>
+        <p>Adds a coupon to the basket.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        couponData
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>An object which contains coupon metadata such as name, amount and description.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="removeCoupon">
+      <section>
+        <header>
+          <h1>removeCoupon(couponCode)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L187">sofa-basket-service/src/sofa.basketService.js:187</a></p>
+        </header>
+        <p>Removes a coupon which is currently active in the basket.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        couponCode
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The code of the coupon to remove</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="getActiveCoupons">
+      <section>
+        <header>
+          <h1>getActiveCoupons()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L211">sofa-basket-service/src/sofa.basketService.js:211</a></p>
+        </header>
+        <p>Gets the coupons which are currently active in the basket.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>basketItem An array of objects that contain coupon data</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="increaseOne">
+      <section>
+        <header>
+          <h1>increaseOne(basketItem)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L228">sofa-basket-service/src/sofa.basketService.js:228</a></p>
+        </header>
+        <p>This is actually a shorthand for <a href="api/src/method/increase">sofa.BasketService.increase</a>. It increases the amount of given basket item by one.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        basketItem
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The basketItem that should be increased by one.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>basketItem Updated basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="increase">
+      <section>
+        <header>
+          <h1>increase(basketItem, number)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L249">sofa-basket-service/src/sofa.basketService.js:249</a></p>
+        </header>
+        <p>Increases the quantity of a given basket item by a given value. Increases
+by one should be done with <a href="api/src/method/increaseOne">sofa.BasketService.increaseOne</a>.</p>
+<p>Behind the scenes, this method is actually a shorthand for
+<code>basketService.addItem()</code> with a particular configuration. Therefore this
+method returns the updated basket item for post processing.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        basketItem
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Basket item to increase.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        number
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-number">number</a>
+      </td>
+      <td>
+        <p>Number to increase.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Updated basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="exists">
+      <section>
+        <header>
+          <h1>exists(product, variant, The)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L277">sofa-basket-service/src/sofa.basketService.js:277</a></p>
+        </header>
+        <p>Checks if an product exists in the basket. You have to pass the product to
+check for. Optionally you can pass a product variant and an option id.
+Returns <code>true</code> or <code>false</code> accordingly.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        product
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The Product object itself.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        variant
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The variant the basket should be checked for.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        The
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-int">int</a>
+      </td>
+      <td>
+        <p>optionId the basket should be checked for.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-bool">bool</a></td>
+    <td><p>True whether the product exists or not.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="removeItem">
+      <section>
+        <header>
+          <h1>removeItem(product, quantity, variant)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L309">sofa-basket-service/src/sofa.basketService.js:309</a></p>
+        </header>
+        <p>Removes an item from the basket.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        product
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The Product that should be removed from the basket.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        quantity
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-number">number</a>
+      </td>
+      <td>
+        <p>The quantity that should be removed from the basket.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        variant
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The variant that should be removed from the basket.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Removed basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="decreaseOne">
+      <section>
+        <header>
+          <h1>decreaseOne(basketItem)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L360">sofa-basket-service/src/sofa.basketService.js:360</a></p>
+        </header>
+        <p>Decreases the quantity of a given basket item by one. This is a shorthand
+method for <a href="api/src/method/decrease">sofa.BasketService.decrease</a> and
+returns the updated basket item.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        basketItem
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The basket item that should be decreased by one</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>The updated basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="decrease">
+      <section>
+        <header>
+          <h1>decrease(basketItem, number)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L381">sofa-basket-service/src/sofa.basketService.js:381</a></p>
+        </header>
+        <p>Decreases that quantity of a given basket item by a given number. This is
+shorthand method for <a href="api/src/method/removeItem">sofa.BasketItem.removeItem</a>
+and therefore returns the updated basket item.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        basketItem
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>The basketItem that should be decreased by one.</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        number
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-number">number</a>
+      </td>
+      <td>
+        <p>Number to decrease.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Updated basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="clear">
+      <section>
+        <header>
+          <h1>clear()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L403">sofa-basket-service/src/sofa.basketService.js:403</a></p>
+        </header>
+        <p>Removes all items from the basket.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>BasketService instance for method chaining.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="clearCoupons">
+      <section>
+        <header>
+          <h1>clearCoupons()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L429">sofa-basket-service/src/sofa.basketService.js:429</a></p>
+        </header>
+        <p>Removes all active coupons from the basket.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>BasketService instance for method chaining.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="find">
+      <section>
+        <header>
+          <h1>find(predicate)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L454">sofa-basket-service/src/sofa.basketService.js:454</a></p>
+        </header>
+        <p>Finds a basket item by the given predicate function.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        predicate
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-function">function</a>
+      </td>
+      <td>
+        <p>Function to test the basketItem against.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Found basket item.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getItems">
+      <section>
+        <header>
+          <h1>getItems()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L476">sofa-basket-service/src/sofa.basketService.js:476</a></p>
+        </header>
+        <p>Returns all basket items.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-array">array</a></td>
+    <td><p>Basket items.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="isEmpty">
+      <section>
+        <header>
+          <h1>isEmpty()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L493">sofa-basket-service/src/sofa.basketService.js:493</a></p>
+        </header>
+        <p>Returns true if the basket is Empty.</p>
+
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-boolean">boolean</a></td>
+    <td><p>empty state.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="getSummary">
+      <section>
+        <header>
+          <h1>getSummary(options)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-basket-service/blob/master/src/sofa.basketService.js#L507">sofa-basket-service/src/sofa.basketService.js:507</a></p>
+        </header>
+        <p>Returns a summary object of the current basket state.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        options
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Options object.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Summary object.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+

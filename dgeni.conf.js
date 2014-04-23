@@ -38,6 +38,14 @@ module.exports = function (config) {
         {
             pattern: 'sofa-device-service/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-storages/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-basket-service/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
         }
     ]);
 

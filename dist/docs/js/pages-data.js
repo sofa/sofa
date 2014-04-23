@@ -95,6 +95,30 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.DeviceService.html",
     "path": "api/src/class/sofa.DeviceService"
+  },
+  "api/src/class/sofa.LocalStorageService": {
+    "docType": "class",
+    "id": "class:sofa.LocalStorageService",
+    "name": "sofa.LocalStorageService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.LocalStorageService.html",
+    "path": "api/src/class/sofa.LocalStorageService"
+  },
+  "api/src/class/sofa.MemoryStorageService": {
+    "docType": "class",
+    "id": "class:sofa.MemoryStorageService",
+    "name": "sofa.MemoryStorageService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.MemoryStorageService.html",
+    "path": "api/src/class/sofa.MemoryStorageService"
+  },
+  "api/src/class/sofa.BasketService": {
+    "docType": "class",
+    "id": "class:sofa.BasketService",
+    "name": "sofa.BasketService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.BasketService.html",
+    "path": "api/src/class/sofa.BasketService"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -165,6 +189,24 @@ angular.module('pagesData', [])
       {
         "name": "sofa.DeviceService",
         "href": "api/src/class/sofa.DeviceService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.LocalStorageService",
+        "href": "api/src/class/sofa.LocalStorageService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.MemoryStorageService",
+        "href": "api/src/class/sofa.MemoryStorageService",
+        "type": "group",
+        "navItems": []
+      },
+      {
+        "name": "sofa.BasketService",
+        "href": "api/src/class/sofa.BasketService",
         "type": "group",
         "navItems": []
       }

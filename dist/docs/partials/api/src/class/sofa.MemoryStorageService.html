@@ -1,0 +1,312 @@
+<a href="http://github.com/sofa/sofa-storages/edit/master/src/sofa.memoryStorageService.js">Improve this doc</a>
+
+
+
+
+<header>
+  <h1>Class: sofa.MemoryStorageService</h1>
+  <dl>
+    <dt>Defined in:</dt>
+    <dd><a href="http://github.com/sofa/sofa-storages/blob/master/src/sofa.memoryStorageService.js#L3">sofa-storages/src/sofa.memoryStorageService.js:3</a></dd>
+    <dt>Dependencies:</dt>
+    <dd>
+      
+        None
+      
+    </dd>
+    <dt>Package:<dt>
+    <dd><a href="http://github.com/sofa/sofa-storages">sofa-storages</a></dt>
+    <dt>Package dependencies:<dt>
+    <dd>
+      
+        
+        <a href="http://github.com/sofa/sofa-core">sofa-core</a>
+      
+    </dd>
+  </dl>
+</header>
+
+
+
+<section>
+  <header>
+    <h1>Installation</h1>
+  </header>
+  <ol>
+    <li>
+      <section>
+        <header>
+          <h1>Getting the source</h1>
+        </header>
+        <p>You can access this <em>class</em> by installing the <em>sofa-storages</em> package. Installing this package is as easy as running one of the following commands:</p>
+
+        <ul>
+          <li>
+            <h3>Via npm:</h3>
+            <pre><code>npm install sofa-storages</code></pre>
+          </li>
+          <li>
+            <h3>Via Bower:</h3>
+            <pre><code>bower install sofa-storages</code></pre>
+          </li>
+          <li>
+            <h3>Via Git:</h3>
+            <pre><code>git clone http://github.com/sofa/sofa-storages</code></pre>
+          </li>
+        </ul>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Embedding the source</h1>
+        </header>
+        <p>After that, embed the distribution file in your HTML document.</p>
+        <pre><code>&lt;script src=&quot;dist/sofa.storages.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+        <p>Don't forget that each package defines its own package dependencies. Make sure to embed their files too if needed.</p>
+      </section>
+    </li>
+    <li>
+      <section>
+        <header>
+          <h1>Use it!</h1>
+        </header>
+
+        
+        
+          
+          <p>After that, create an instance of this service by using the `new` operator:</p>
+
+            
+            <pre><code>var memoryStorageService = new sofa.MemoryStorageService();</code></pre>
+            
+          
+
+        
+      </section>
+    </li>
+  <ul>
+</section>
+
+
+
+<section>
+  <header>
+    <h1>Description</h1>
+  </header>
+  <p>Simple memory storage service. Provides methods to get and set values in form
+of simple key - value pairs.</p>
+
+</section>
+
+
+  
+  
+
+  
+<section>
+  <header>
+    <h1>Methods</h1>
+  </header>
+  <ul>
+    <li id="set">
+      <section>
+        <header>
+          <h1>set(id, data)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-storages/blob/master/src/sofa.memoryStorageService.js#L18">sofa-storages/src/sofa.memoryStorageService.js:18</a></p>
+        </header>
+        <p>Sets a value by a given id.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        id
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>Identifier</p>
+
+        
+      </td>
+    </tr>
+    
+    <tr>
+      <td>
+        data
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-object">object</a>
+      </td>
+      <td>
+        <p>Any kind of data to store under given id.</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="get">
+      <section>
+        <header>
+          <h1>get(id)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-storages/blob/master/src/sofa.memoryStorageService.js#L33">sofa-storages/src/sofa.memoryStorageService.js:33</a></p>
+        </header>
+        <p>Gets a value by a given id.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        id
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>Identifier</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+        <h2>Returns</h2>
+        <table class="variables-matrix return-arguments">
+  <tr>
+    <td><a href="" class="label type-hint type-hint-object">object</a></td>
+    <td><p>Stored data.</p>
+</td>
+  </tr>
+</table>
+        
+      </section>
+    </li>
+    
+    <li id="remove">
+      <section>
+        <header>
+          <h1>remove(id)
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-storages/blob/master/src/sofa.memoryStorageService.js#L49">sofa-storages/src/sofa.memoryStorageService.js:49</a></p>
+        </header>
+        <p>Removes a value by a given id.</p>
+
+
+        
+        <h2>Parameters</h2>
+        
+<table class="variables-matrix input-arguments">
+  <thead>
+    <tr>
+      <th>Param</th>
+      <th>Type</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      <td>
+        id
+        
+        
+      </td>
+      <td>
+        <a href="" class="label type-hint type-hint-string">string</a>
+      </td>
+      <td>
+        <p>Identifier</p>
+
+        
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    
+    <li id="clear">
+      <section>
+        <header>
+          <h1>clear()
+</h1>
+          <p>Defined in <a href="http://github.com/sofa/sofa-storages/blob/master/src/sofa.memoryStorageService.js#L63">sofa-storages/src/sofa.memoryStorageService.js:63</a></p>
+        </header>
+        <p>Clear memory storage.</p>
+
+
+        
+
+        
+        
+        
+      </section>
+    </li>
+    </ul>
+  
+  
+
+
+
+
+
