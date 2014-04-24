@@ -20,63 +20,7 @@ module.exports = function (config) {
 
     config.set('source.files', [
         {
-            pattern: 'sofa-core/src/sofa.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-core/src/sofa.*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-logging-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-url-parser-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-device-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-storages/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-basket-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-url-construction-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-search-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-checkout-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-tracking/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-couch-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-pages-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-coupon-service/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: 'sofa-http-service/src/sofa*.js',
+            pattern: 'sofa-*/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
         },
         {

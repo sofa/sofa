@@ -1,12 +1,28 @@
 angular.module('pagesData', [])
   .value('SOFA_PAGES', {
-  "api/src/class/sofa": {
+  "api/src/class/sofa.BasketService": {
     "docType": "class",
-    "id": "class:sofa",
-    "name": "sofa",
+    "id": "class:sofa.BasketService",
+    "name": "sofa.BasketService",
     "area": "api",
-    "outputPath": "partials/api/src/class/sofa.html",
-    "path": "api/src/class/sofa"
+    "outputPath": "partials/api/src/class/sofa.BasketService.html",
+    "path": "api/src/class/sofa.BasketService"
+  },
+  "api/src/class/sofa.CheckoutService": {
+    "docType": "class",
+    "id": "class:sofa.CheckoutService",
+    "name": "sofa.CheckoutService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.CheckoutService.html",
+    "path": "api/src/class/sofa.CheckoutService"
+  },
+  "api/src/class/sofa.Util.FormatUtils": {
+    "docType": "class",
+    "id": "class:sofa.Util.FormatUtils",
+    "name": "sofa.Util.FormatUtils",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.Util.FormatUtils.html",
+    "path": "api/src/class/sofa.Util.FormatUtils"
   },
   "api/src/class/sofa.ConfigService": {
     "docType": "class",
@@ -15,6 +31,14 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.ConfigService.html",
     "path": "api/src/class/sofa.ConfigService"
+  },
+  "api/src/class/sofa": {
+    "docType": "class",
+    "id": "class:sofa",
+    "name": "sofa",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.html",
+    "path": "api/src/class/sofa"
   },
   "api/src/class/sofa.LocationService": {
     "docType": "class",
@@ -72,21 +96,37 @@ angular.module('pagesData', [])
     "outputPath": "partials/api/src/class/sofa.Util.TreeIterator.html",
     "path": "api/src/class/sofa.Util.TreeIterator"
   },
-  "api/src/class/sofa.LoggingService": {
+  "api/src/class/sofa.comparer.ProductComparer": {
     "docType": "class",
-    "id": "class:sofa.LoggingService",
-    "name": "sofa.LoggingService",
+    "id": "class:sofa.comparer.ProductComparer",
+    "name": "sofa.comparer.ProductComparer",
     "area": "api",
-    "outputPath": "partials/api/src/class/sofa.LoggingService.html",
-    "path": "api/src/class/sofa.LoggingService"
+    "outputPath": "partials/api/src/class/sofa.comparer.ProductComparer.html",
+    "path": "api/src/class/sofa.comparer.ProductComparer"
   },
-  "api/src/class/sofa.UrlParserService": {
+  "api/src/class/sofa.CouchService": {
     "docType": "class",
-    "id": "class:sofa.UrlParserService",
-    "name": "sofa.UrlParserService",
+    "id": "class:sofa.CouchService",
+    "name": "sofa.CouchService",
     "area": "api",
-    "outputPath": "partials/api/src/class/sofa.UrlParserService.html",
-    "path": "api/src/class/sofa.UrlParserService"
+    "outputPath": "partials/api/src/class/sofa.CouchService.html",
+    "path": "api/src/class/sofa.CouchService"
+  },
+  "api/src/class/sofa.helper.CategoryMap": {
+    "docType": "class",
+    "id": "class:sofa.helper.CategoryMap",
+    "name": "sofa.helper.CategoryMap",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.helper.CategoryMap.html",
+    "path": "api/src/class/sofa.helper.CategoryMap"
+  },
+  "api/src/class/sofa.CouponService": {
+    "docType": "class",
+    "id": "class:sofa.CouponService",
+    "name": "sofa.CouponService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.CouponService.html",
+    "path": "api/src/class/sofa.CouponService"
   },
   "api/src/class/sofa.DeviceService": {
     "docType": "class",
@@ -95,6 +135,46 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.DeviceService.html",
     "path": "api/src/class/sofa.DeviceService"
+  },
+  "api/src/class/sofa.HttpService": {
+    "docType": "class",
+    "id": "class:sofa.HttpService",
+    "name": "sofa.HttpService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.HttpService.html",
+    "path": "api/src/class/sofa.HttpService"
+  },
+  "api/src/class/sofa.LoggingService": {
+    "docType": "class",
+    "id": "class:sofa.LoggingService",
+    "name": "sofa.LoggingService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.LoggingService.html",
+    "path": "api/src/class/sofa.LoggingService"
+  },
+  "api/src/class/sofa.PagesService": {
+    "docType": "class",
+    "id": "class:sofa.PagesService",
+    "name": "sofa.PagesService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.PagesService.html",
+    "path": "api/src/class/sofa.PagesService"
+  },
+  "api/src/class/sofa.QService": {
+    "docType": "class",
+    "id": "class:sofa.QService",
+    "name": "sofa.QService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.QService.html",
+    "path": "api/src/class/sofa.QService"
+  },
+  "api/src/class/sofa.SearchService": {
+    "docType": "class",
+    "id": "class:sofa.SearchService",
+    "name": "sofa.SearchService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.SearchService.html",
+    "path": "api/src/class/sofa.SearchService"
   },
   "api/src/class/sofa.LocalStorageService": {
     "docType": "class",
@@ -111,46 +191,6 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.MemoryStorageService.html",
     "path": "api/src/class/sofa.MemoryStorageService"
-  },
-  "api/src/class/sofa.BasketService": {
-    "docType": "class",
-    "id": "class:sofa.BasketService",
-    "name": "sofa.BasketService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.BasketService.html",
-    "path": "api/src/class/sofa.BasketService"
-  },
-  "api/src/class/sofa.UrlConstructionService": {
-    "docType": "class",
-    "id": "class:sofa.UrlConstructionService",
-    "name": "sofa.UrlConstructionService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.UrlConstructionService.html",
-    "path": "api/src/class/sofa.UrlConstructionService"
-  },
-  "api/src/class/sofa.SearchService": {
-    "docType": "class",
-    "id": "class:sofa.SearchService",
-    "name": "sofa.SearchService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.SearchService.html",
-    "path": "api/src/class/sofa.SearchService"
-  },
-  "api/src/class/sofa.CheckoutService": {
-    "docType": "class",
-    "id": "class:sofa.CheckoutService",
-    "name": "sofa.CheckoutService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.CheckoutService.html",
-    "path": "api/src/class/sofa.CheckoutService"
-  },
-  "api/src/class/sofa.Util.FormatUtils": {
-    "docType": "class",
-    "id": "class:sofa.Util.FormatUtils",
-    "name": "sofa.Util.FormatUtils",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.Util.FormatUtils.html",
-    "path": "api/src/class/sofa.Util.FormatUtils"
   },
   "api/src/class/sofa.tracking.BingTracker": {
     "docType": "class",
@@ -176,53 +216,21 @@ angular.module('pagesData', [])
     "outputPath": "partials/api/src/class/sofa.tracking.TrackingService.html",
     "path": "api/src/class/sofa.tracking.TrackingService"
   },
-  "api/src/class/sofa.comparer.ProductComparer": {
+  "api/src/class/sofa.UrlConstructionService": {
     "docType": "class",
-    "id": "class:sofa.comparer.ProductComparer",
-    "name": "sofa.comparer.ProductComparer",
+    "id": "class:sofa.UrlConstructionService",
+    "name": "sofa.UrlConstructionService",
     "area": "api",
-    "outputPath": "partials/api/src/class/sofa.comparer.ProductComparer.html",
-    "path": "api/src/class/sofa.comparer.ProductComparer"
+    "outputPath": "partials/api/src/class/sofa.UrlConstructionService.html",
+    "path": "api/src/class/sofa.UrlConstructionService"
   },
-  "api/src/class/sofa.CouchService": {
+  "api/src/class/sofa.UrlParserService": {
     "docType": "class",
-    "id": "class:sofa.CouchService",
-    "name": "sofa.CouchService",
+    "id": "class:sofa.UrlParserService",
+    "name": "sofa.UrlParserService",
     "area": "api",
-    "outputPath": "partials/api/src/class/sofa.CouchService.html",
-    "path": "api/src/class/sofa.CouchService"
-  },
-  "api/src/class/sofa.helper.CategoryMap": {
-    "docType": "class",
-    "id": "class:sofa.helper.CategoryMap",
-    "name": "sofa.helper.CategoryMap",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.helper.CategoryMap.html",
-    "path": "api/src/class/sofa.helper.CategoryMap"
-  },
-  "api/src/class/sofa.PagesService": {
-    "docType": "class",
-    "id": "class:sofa.PagesService",
-    "name": "sofa.PagesService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.PagesService.html",
-    "path": "api/src/class/sofa.PagesService"
-  },
-  "api/src/class/sofa.CouponService": {
-    "docType": "class",
-    "id": "class:sofa.CouponService",
-    "name": "sofa.CouponService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.CouponService.html",
-    "path": "api/src/class/sofa.CouponService"
-  },
-  "api/src/class/sofa.HttpService": {
-    "docType": "class",
-    "id": "class:sofa.HttpService",
-    "name": "sofa.HttpService",
-    "area": "api",
-    "outputPath": "partials/api/src/class/sofa.HttpService.html",
-    "path": "api/src/class/sofa.HttpService"
+    "outputPath": "partials/api/src/class/sofa.UrlParserService.html",
+    "path": "api/src/class/sofa.UrlParserService"
   },
   "api": {
     "docType": "overview",
@@ -245,13 +253,28 @@ angular.module('pagesData', [])
             "name": "Classes",
             "components": [
               {
-                "name": "sofa",
-                "href": "api/src/class/sofa",
+                "name": "sofa.BasketService",
+                "href": "api/src/class/sofa.BasketService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.CheckoutService",
+                "href": "api/src/class/sofa.CheckoutService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.Util.FormatUtils",
+                "href": "api/src/class/sofa.Util.FormatUtils",
                 "type": "group"
               },
               {
                 "name": "sofa.ConfigService",
                 "href": "api/src/class/sofa.ConfigService",
+                "type": "group"
+              },
+              {
+                "name": "sofa",
+                "href": "api/src/class/sofa",
                 "type": "group"
               },
               {
@@ -275,18 +298,53 @@ angular.module('pagesData', [])
                 "type": "group"
               },
               {
-                "name": "sofa.LoggingService",
-                "href": "api/src/class/sofa.LoggingService",
+                "name": "sofa.comparer.ProductComparer",
+                "href": "api/src/class/sofa.comparer.ProductComparer",
                 "type": "group"
               },
               {
-                "name": "sofa.UrlParserService",
-                "href": "api/src/class/sofa.UrlParserService",
+                "name": "sofa.CouchService",
+                "href": "api/src/class/sofa.CouchService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.helper.CategoryMap",
+                "href": "api/src/class/sofa.helper.CategoryMap",
+                "type": "group"
+              },
+              {
+                "name": "sofa.CouponService",
+                "href": "api/src/class/sofa.CouponService",
                 "type": "group"
               },
               {
                 "name": "sofa.DeviceService",
                 "href": "api/src/class/sofa.DeviceService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.HttpService",
+                "href": "api/src/class/sofa.HttpService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.LoggingService",
+                "href": "api/src/class/sofa.LoggingService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.PagesService",
+                "href": "api/src/class/sofa.PagesService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.QService",
+                "href": "api/src/class/sofa.QService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.SearchService",
+                "href": "api/src/class/sofa.SearchService",
                 "type": "group"
               },
               {
@@ -297,31 +355,6 @@ angular.module('pagesData', [])
               {
                 "name": "sofa.MemoryStorageService",
                 "href": "api/src/class/sofa.MemoryStorageService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.BasketService",
-                "href": "api/src/class/sofa.BasketService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.UrlConstructionService",
-                "href": "api/src/class/sofa.UrlConstructionService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.SearchService",
-                "href": "api/src/class/sofa.SearchService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.CheckoutService",
-                "href": "api/src/class/sofa.CheckoutService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.Util.FormatUtils",
-                "href": "api/src/class/sofa.Util.FormatUtils",
                 "type": "group"
               },
               {
@@ -340,33 +373,13 @@ angular.module('pagesData', [])
                 "type": "group"
               },
               {
-                "name": "sofa.comparer.ProductComparer",
-                "href": "api/src/class/sofa.comparer.ProductComparer",
+                "name": "sofa.UrlConstructionService",
+                "href": "api/src/class/sofa.UrlConstructionService",
                 "type": "group"
               },
               {
-                "name": "sofa.CouchService",
-                "href": "api/src/class/sofa.CouchService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.helper.CategoryMap",
-                "href": "api/src/class/sofa.helper.CategoryMap",
-                "type": "group"
-              },
-              {
-                "name": "sofa.PagesService",
-                "href": "api/src/class/sofa.PagesService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.CouponService",
-                "href": "api/src/class/sofa.CouponService",
-                "type": "group"
-              },
-              {
-                "name": "sofa.HttpService",
-                "href": "api/src/class/sofa.HttpService",
+                "name": "sofa.UrlParserService",
+                "href": "api/src/class/sofa.UrlParserService",
                 "type": "group"
               }
             ]

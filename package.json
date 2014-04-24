@@ -71,6 +71,6 @@
     "sofa-pages-service": "git+ssh://git@github.com:sofa/sofa-pages-service.git#docs",
     "sofa-coupon-service": "git+ssh://git@github.com:sofa/sofa-coupon-service.git#docs",
     "sofa-http-service": "git+ssh://git@github.com:sofa/sofa-http-service.git#docs",
-    "sofa-q-service": "~0.1.0"
+    "sofa-q-service": "git+ssh://git@github.com:sofa/sofa-q-service.git#docs"
   }
 }
