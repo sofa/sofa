@@ -1,0 +1,7 @@
+{
+  "name": "example-example-sofa-namespace",
+  "files": [
+    "index-production.html",
+    "app.js"
+  ]
+}

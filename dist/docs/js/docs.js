@@ -543,6 +543,7 @@ angular.module('search', [])
     var MIN_SEARCH_LENGTH = 3;
     if(q.length >= MIN_SEARCH_LENGTH) {
       var results = docsSearch(q);
+      console.dir(results);
       var totalAreas = 0;
       for(var i in results) {
         ++totalAreas;
@@ -597,8 +598,8 @@ angular.module('search', [])
   };
 })
 
-.factory('docsSearch', ['$rootScope','lunrSearch', 'NG_PAGES',
-    function($rootScope, lunrSearch, NG_PAGES) {
+.factory('docsSearch', ['$rootScope','lunrSearch', 'SOFA_PAGES',
+    function($rootScope, lunrSearch, SOFA_PAGES) {
   if (window.RUNNING_IN_NG_TEST_RUNNER) {
     return null;
   }
@@ -609,7 +610,7 @@ angular.module('search', [])
     this.field('keywords', { boost : 20 });
   });
 
-  angular.forEach(NG_PAGES, function(page, key) {
+  angular.forEach(SOFA_PAGES, function(page, key) {
     if(page.searchTerms) {
       index.store({
         id : key,
@@ -629,7 +630,7 @@ angular.module('search', [])
     };
     angular.forEach(index.search(q), function(result) {
       var key = result.ref;
-      var item = NG_PAGES[key];
+      var item = SOFA_PAGES[key];
       var area = item.area;
       item.path = key;
 

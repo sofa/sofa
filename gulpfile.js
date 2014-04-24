@@ -22,7 +22,8 @@ gulp.task('assets', function() {
     gulp.src(['app/assets/**/*']).pipe(gulp.dest(outputFolder)),
     copyComponent('angular'),
     copyComponent('angular-route'),
-    copyComponent('angular-cookies')
+    copyComponent('angular-cookies'),
+    copyComponent('lunr.js')
   );
 });
 

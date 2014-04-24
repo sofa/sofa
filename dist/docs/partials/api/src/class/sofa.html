@@ -127,7 +127,35 @@ would be <code>foo.bar.bazinga</code> as well as <code>foo</code>.</p>
 method creates the given namespace automatically under <code>sofa</code> namespace. In case
 &#39;sofa&#39; is given as root namespace, it gets stripped out, so its more a kind of
 syntactic sugar to mention <code>sofa</code> namespace.</p>
-<p>The following code creates a namespace for <code>sofa.services.FooService</code>:</p>
+<p>
+
+
+<div class="runnable-example"
+    path="examples/example-example-sofa-namespace"
+    name="example-sofa-namespace">
+
+ 
+  <div class="runnable-example-file" 
+    name="index.html"
+    language="html"
+    type="html">
+    <pre><code>Hello</code></pre>  
+  </div>
+
+  <div class="runnable-example-file" 
+    name="app.js"
+    language="js"
+    type="js">
+    <pre><code>var foo = &#39;bar&#39;;</code></pre>  
+  </div>
+
+
+  <iframe class="runnable-example-frame" src="examples/example-example-sofa-namespace/index.html" name="example-example-sofa-namespace"></iframe>
+</div>
+
+
+
+The following code creates a namespace for <code>sofa.services.FooService</code>:</p>
 <pre><code class="lang-js">sofa.namespace(&#39;sofa.services.FooService&#39;);</code></pre>
 <p>And like mentioned, this would also create exactly the same namespace:</p>
 <pre><code class="lang-js">sofa.namespace(&#39;services.FooService&#39;);</code></pre>
@@ -192,7 +220,7 @@ bind - A convenient function to bind a value to the namespace.</code></pre>
         <header>
           <h1>define(namespace, fn)
 </h1>
-          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.js#L95">sofa-core/src/sofa.js:95</a></p>
+          <p>Defined in <a href="http://github.com/sofa/sofa-core/blob/master/src/sofa.js#L103">sofa-core/src/sofa.js:103</a></p>
         </header>
         <p>The <code>define</code> method delegates to sofa.namespace and binds a new value to its
 given namespace. Because of delegation, rules for the given namespace are the

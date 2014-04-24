@@ -77,6 +77,28 @@
     <header>
         <h1>Sofa</h1>
     </header>
+    <div ng-controller="DocsSearchCtrl">
+        <form ng-class="{focus:focus}" ng-submit="submit()">
+            <input type="text"
+                    name="as_q"
+                    class="search-query"
+                    placeholder="Click or press / to search"
+                    ng-focus="focus=true"
+                    ng-blur="focus=false"
+                    ng-change="search(q)"
+                    ng-model="q"
+                    docs-search-input
+                    autocomplete="off" />
+        </form>
+        <div ng-repeat="(key, value) in results">
+            <h4>{{ key }}</h4>
+            <div>
+                <div ng-repeat="item in value">
+                - <a ng-click="hideResults()" ng-href="#!/{{ item.path }}">{{ item.name }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav>
         <ul>
             <li ng-repeat="navGroup in currentArea.navGroups track by navGroup.name">
@@ -94,7 +116,15 @@
             </li>
         </ul>
     </nav>
+
     <main>
+
+        <ul>
+            <li ng-repeat="crumb in breadcrumb">
+                <a ng-href="{{crumb.url}}">{{crumb.name}}</a>
+            </li>
+        </ul>
+
         <div ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
     </main>
     <footer>

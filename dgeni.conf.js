@@ -19,33 +19,32 @@ module.exports = function (config) {
     config.set('source.projectPath', '.');
 
     config.set('source.files', [
-        {
-            pattern: 'sofa-*/src/sofa*.js',
-            basePath: path.resolve(__dirname, './node_modules')
-        },
-        {
-            pattern: '**/*.sofadoc',
-            basePath: path.resolve(__dirname, 'docs/content')
-        }
+        { pattern: 'sofa-*/src/sofa*.js', basePath: path.resolve(__dirname, './node_modules') },
+        { pattern: '**/*.sofadoc', basePath: path.resolve(__dirname, 'docs/content') }
     ]);
 
     config.set('rendering.outputFolder', 'dist/docs');
     config.set('rendering.contentsFolder', 'partials');
 
-  config.merge('deployment', {
-    environments: [{
-      name: 'default',
-      scripts: [
-        'components/angular-' + getVersion('angular')+ '/angular.js',
-        'components/angular-route-' + getVersion('angular-route')+ '/angular-route.js',
-        'components/angular-cookies-' + getVersion('angular-cookies')+ '/angular-cookies.js',
-        'js/versions-data.js',
-        'js/pages-data.js',
-        'js/docs.js'
-      ],
-      stylesheets: []
-    }]
-  });
+    config.merge('deployment', {
+        environments: [{
+            name: 'default',
+            examples: {
+                commonFiles: {
+                }
+            },
+            scripts: [
+                'components/lunr.js-' + getVersion('lunr.js') + '/lunr.js',
+                'components/angular-' + getVersion('angular')+ '/angular.js',
+                'components/angular-route-' + getVersion('angular-route')+ '/angular-route.js',
+                'components/angular-cookies-' + getVersion('angular-cookies')+ '/angular-cookies.js',
+                'js/versions-data.js',
+                'js/pages-data.js',
+                'js/docs.js'
+            ],
+            stylesheets: []
+        }]
+    });
 
     return config;
 };
