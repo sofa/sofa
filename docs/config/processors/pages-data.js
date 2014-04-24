@@ -36,144 +36,60 @@ function getNavGroup(pages, area, pageSorter, pageMapper) {
 var navGroupMappers = {
   api: function(areaPages, area) {
 
-    var navGroups = _(areaPages)
-        .filter(function (doc) {
-            var dt = doc.docType;
-            return (dt === 'class' || dt === 'module' || dt === 'model');
-        })
-        .groupBy(function (doc) {
-            return doc.name
-        })
-        .map(function (pages, name) {
-            var navItems = [];
-            var componentPage;
-
-            _(pages)
-
-            .groupBy('docType')
-            .tap(function(docTypes) {
-                log.debug(_.keys(docTypes));
-                // Extract the module page from the collection
-                if (docTypes.class) {
-                    componentPage = docTypes.class[0];
-                    delete docTypes.class;
-                } else if (docTypes.model) {
-                    componentPage = docTypes.model[0];
-                    delete docTypes.model;
-                }
+    function filterComponentsByType(docs, type) {
+        return _(docs)
+            .filter(function (doc) {
+                return doc.docType === type;
             })
-            .forEach(function(sectionPages, sectionName) {
+            .groupBy(function (doc) {
+                return doc.name;
+            })
+            .map(function (pages, name) {
 
-                sectionPages = _.sortBy(sectionPages, 'name');
+                var componentPage;
 
-                if (sectionPages.length > 0) {
-                    // Push a navItem for this section
-                    navItems.push({
-                        name: sectionName,
-                        type: 'section',
-                        href: path.dirname(sectionPages[0].path)
+                _(pages)
+                    .groupBy('docType')
+                    .tap(function (docTypes) {
+                        componentPage = docTypes[type][0];
+                        delete docTypes[type];
                     });
+                return {
+                    name: name,
+                    href: componentPage.path,
+                    type: 'group',
+                    // navItems: navItems
+                };
+            }).value();
+    }
 
-                    // Push the rest of the sectionPages for this section
-                    _.forEach(sectionPages, function(sectionPage) {
+    var classes = filterComponentsByType(areaPages, 'class');
+    var models = filterComponentsByType(areaPages, 'model');
 
-                        navItems.push({
-                            name: sectionPage.name,
-                            href: sectionPage.path,
-                            type: sectionPage.docType
-                        });
-
-                    });
+    var navGroups = [
+        {
+            name: 'Sofa',
+            components: [
+                { 
+                    name: 'Classes',
+                    components: classes
+                },
+                { 
+                    name: 'Models',
+                    components: models
                 }
-            });
-            return {
-                name: name,
-                href: componentPage.path,
-                type: 'group',
-                navItems: navItems
-            };
-        })
-        .value();
-      // .groupBy('class')
+            ]
+        }
+        // {
+        //     name: 'Angular Sofa',
+        //     components: []
+        // }
+    ];
 
-      // .map(function(modulePages, moduleName) {
-      //   log.debug('moduleName: ' + moduleName);
-      //   var navItems = [];
-      //   var modulePage;
 
-      //   _(modulePages)
-
-      //     .groupBy('docType')
-
-      //     .tap(function(docTypes) {
-      //       log.debug(_.keys(docTypes));
-      //       // Extract the module page from the collection
-      //       modulePage = docTypes.module[0];
-      //       delete docTypes.module;
-      //     })
-
-      //     .tap(function(docTypes) {
-      //       if ( docTypes.input ) {
-      //         docTypes.directive = docTypes.directive || [];
-      //         // Combine input docTypes into directive docTypes
-      //         docTypes.directive = docTypes.directive.concat(docTypes.input);
-      //         delete docTypes.input;
-      //       }
-      //     })
-
-      //     .forEach(function(sectionPages, sectionName) {
-
-      //       sectionPages = _.sortBy(sectionPages, 'name');
-
-      //       if ( sectionPages.length > 0 ) {
-      //         // Push a navItem for this section
-      //         navItems.push({
-      //           name: sectionName,
-      //           type: 'section',
-      //           href: path.dirname(sectionPages[0].path)
-      //         });
-
-      //         // Push the rest of the sectionPages for this section
-      //         _.forEach(sectionPages, function(sectionPage) {
-
-      //           navItems.push({
-      //             name: sectionPage.name,
-      //             href: sectionPage.path,
-      //             type: sectionPage.docType
-      //           });
-
-      //         });
-      //       }
-      //     });
-      //   return {
-      //     name: moduleName,
-      //     href: modulePage.path,
-      //     type: 'group',
-      //     navItems: navItems
-      //   };
-      // })
-      // .value();
     return navGroups;
   },
-  // tutorial: function(pages, area) {
-  //   return [getNavGroup(pages, area, 'step', function(page) {
-  //     return {
-  //       name: page.name,
-  //       step: page.step,
-  //       href: page.path,
-  //       type: 'tutorial'
-  //     };
-  //   })];
-  // },
-  // error: function(pages, area) {
-  //   return [getNavGroup(pages, area, 'path', function(page) {
-  //     return {
-  //       name: page.name,
-  //       href: page.path,
-  //       type: page.docType === 'errorNamespace' ? 'section' : 'error'
-  //     };
-  //   })];
-  // },
+
   pages: function(pages, area) {
     return [getNavGroup(pages, area, 'path', function(page) {
       return {

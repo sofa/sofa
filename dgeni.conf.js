@@ -74,6 +74,14 @@ module.exports = function (config) {
         {
             pattern: 'sofa-coupon-service/src/sofa*.js',
             basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: 'sofa-http-service/src/sofa*.js',
+            basePath: path.resolve(__dirname, './node_modules')
+        },
+        {
+            pattern: '**/*.sofadoc',
+            basePath: path.resolve(__dirname, 'docs/content')
         }
     ]);
 

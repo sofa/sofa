@@ -80,10 +80,15 @@
     <nav>
         <ul>
             <li ng-repeat="navGroup in currentArea.navGroups track by navGroup.name">
-                <a href="#!/{{ navGroup.href }}">{{ navGroup.name }}</a>
+                {{ navGroup.name }}
                 <ul>
-                    <li ng-repeat="navItem in navGroup.navItems">
-                        <a href="#!/{{navItem.href}}">{{navItem.name}}</a>
+                    <li ng-repeat="componentGroup in navGroup.components track by componentGroup.name">
+                        {{ componentGroup.name }}
+                        <ul>
+                            <li ng-repeat="component in componentGroup.components">
+                                <a href="#!/{{ component.href }}">{{ component.name }}</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>
@@ -92,6 +97,9 @@
     <main>
         <div ng-include="currentPage.outputPath || 'Error404.html'" onload="afterPartialLoaded()"  autoscroll></div>
     </main>
+    <footer>
+        <p>2014 &copy; Sofa.io
+    </footer>
 </body>
 </html>
 

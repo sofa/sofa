@@ -215,6 +215,22 @@ angular.module('pagesData', [])
     "area": "api",
     "outputPath": "partials/api/src/class/sofa.CouponService.html",
     "path": "api/src/class/sofa.CouponService"
+  },
+  "api/src/class/sofa.HttpService": {
+    "docType": "class",
+    "id": "class:sofa.HttpService",
+    "name": "sofa.HttpService",
+    "area": "api",
+    "outputPath": "partials/api/src/class/sofa.HttpService.html",
+    "path": "api/src/class/sofa.HttpService"
+  },
+  "api": {
+    "docType": "overview",
+    "id": "index",
+    "name": "API Reference",
+    "area": "api",
+    "outputPath": "partials/api.html",
+    "path": "api"
   }
 })
   .value('SOFA_NAVIGATION', {
@@ -223,160 +239,154 @@ angular.module('pagesData', [])
     "name": "API",
     "navGroups": [
       {
-        "name": "sofa",
-        "href": "api/src/class/sofa",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.ConfigService",
-        "href": "api/src/class/sofa.ConfigService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.LocationService",
-        "href": "api/src/class/sofa.LocationService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.models.BasketItem",
-        "href": "api/src/model/sofa.models.BasketItem",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.models.Product",
-        "href": "api/src/model/sofa.models.Product",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.Util",
-        "href": "api/src/class/sofa.Util",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.Util.Array",
-        "href": "api/src/class/sofa.Util.Array",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.Util.TreeIterator",
-        "href": "api/src/class/sofa.Util.TreeIterator",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.LoggingService",
-        "href": "api/src/class/sofa.LoggingService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.UrlParserService",
-        "href": "api/src/class/sofa.UrlParserService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.DeviceService",
-        "href": "api/src/class/sofa.DeviceService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.LocalStorageService",
-        "href": "api/src/class/sofa.LocalStorageService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.MemoryStorageService",
-        "href": "api/src/class/sofa.MemoryStorageService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.BasketService",
-        "href": "api/src/class/sofa.BasketService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.UrlConstructionService",
-        "href": "api/src/class/sofa.UrlConstructionService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.SearchService",
-        "href": "api/src/class/sofa.SearchService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.CheckoutService",
-        "href": "api/src/class/sofa.CheckoutService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.Util.FormatUtils",
-        "href": "api/src/class/sofa.Util.FormatUtils",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.tracking.BingTracker",
-        "href": "api/src/class/sofa.tracking.BingTracker",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.tracking.GoogleAnalyticsTracker",
-        "href": "api/src/class/sofa.tracking.GoogleAnalyticsTracker",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.tracking.TrackingService",
-        "href": "api/src/class/sofa.tracking.TrackingService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.comparer.ProductComparer",
-        "href": "api/src/class/sofa.comparer.ProductComparer",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.CouchService",
-        "href": "api/src/class/sofa.CouchService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.helper.CategoryMap",
-        "href": "api/src/class/sofa.helper.CategoryMap",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.PagesService",
-        "href": "api/src/class/sofa.PagesService",
-        "type": "group",
-        "navItems": []
-      },
-      {
-        "name": "sofa.CouponService",
-        "href": "api/src/class/sofa.CouponService",
-        "type": "group",
-        "navItems": []
+        "name": "Sofa",
+        "components": [
+          {
+            "name": "Classes",
+            "components": [
+              {
+                "name": "sofa",
+                "href": "api/src/class/sofa",
+                "type": "group"
+              },
+              {
+                "name": "sofa.ConfigService",
+                "href": "api/src/class/sofa.ConfigService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.LocationService",
+                "href": "api/src/class/sofa.LocationService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.Util",
+                "href": "api/src/class/sofa.Util",
+                "type": "group"
+              },
+              {
+                "name": "sofa.Util.Array",
+                "href": "api/src/class/sofa.Util.Array",
+                "type": "group"
+              },
+              {
+                "name": "sofa.Util.TreeIterator",
+                "href": "api/src/class/sofa.Util.TreeIterator",
+                "type": "group"
+              },
+              {
+                "name": "sofa.LoggingService",
+                "href": "api/src/class/sofa.LoggingService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.UrlParserService",
+                "href": "api/src/class/sofa.UrlParserService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.DeviceService",
+                "href": "api/src/class/sofa.DeviceService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.LocalStorageService",
+                "href": "api/src/class/sofa.LocalStorageService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.MemoryStorageService",
+                "href": "api/src/class/sofa.MemoryStorageService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.BasketService",
+                "href": "api/src/class/sofa.BasketService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.UrlConstructionService",
+                "href": "api/src/class/sofa.UrlConstructionService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.SearchService",
+                "href": "api/src/class/sofa.SearchService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.CheckoutService",
+                "href": "api/src/class/sofa.CheckoutService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.Util.FormatUtils",
+                "href": "api/src/class/sofa.Util.FormatUtils",
+                "type": "group"
+              },
+              {
+                "name": "sofa.tracking.BingTracker",
+                "href": "api/src/class/sofa.tracking.BingTracker",
+                "type": "group"
+              },
+              {
+                "name": "sofa.tracking.GoogleAnalyticsTracker",
+                "href": "api/src/class/sofa.tracking.GoogleAnalyticsTracker",
+                "type": "group"
+              },
+              {
+                "name": "sofa.tracking.TrackingService",
+                "href": "api/src/class/sofa.tracking.TrackingService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.comparer.ProductComparer",
+                "href": "api/src/class/sofa.comparer.ProductComparer",
+                "type": "group"
+              },
+              {
+                "name": "sofa.CouchService",
+                "href": "api/src/class/sofa.CouchService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.helper.CategoryMap",
+                "href": "api/src/class/sofa.helper.CategoryMap",
+                "type": "group"
+              },
+              {
+                "name": "sofa.PagesService",
+                "href": "api/src/class/sofa.PagesService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.CouponService",
+                "href": "api/src/class/sofa.CouponService",
+                "type": "group"
+              },
+              {
+                "name": "sofa.HttpService",
+                "href": "api/src/class/sofa.HttpService",
+                "type": "group"
+              }
+            ]
+          },
+          {
+            "name": "Models",
+            "components": [
+              {
+                "name": "sofa.models.BasketItem",
+                "href": "api/src/model/sofa.models.BasketItem",
+                "type": "group"
+              },
+              {
+                "name": "sofa.models.Product",
+                "href": "api/src/model/sofa.models.Product",
+                "type": "group"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
